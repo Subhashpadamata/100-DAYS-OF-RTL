@@ -20,8 +20,8 @@ module demux_1x4(
 
   wire p, q;
 
-  not n1(s[1],p);
-  not n2(s[0],q);
+  not n1(p,s[1]);
+  not n2(q,s[0]);
   and a1(y[0],inter,p,q);
   and a2(y[1],inter,p,s[0]);
   and a3(y[2],inter,s[1],q);
