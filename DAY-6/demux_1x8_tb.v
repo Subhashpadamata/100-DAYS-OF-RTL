@@ -9,9 +9,7 @@ module demux_1x8_tb;
     initial begin
         i=1'b0;
         s=3'b000;
-        #100 i=8'h1a;
-        #100 i=8'h04;
-        #100 i=8'hfc;
+        #100 i=8'b1;
         #800 $finish;
     end
     
