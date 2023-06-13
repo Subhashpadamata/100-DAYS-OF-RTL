@@ -11,3 +11,5 @@ Day-1 : FULL ADDER (Three Modelling styles). <br>
 Day-2 : FULL SUBTRACTOR (Three Modelling styles). <br>
 Day-3 : 8x1 Mux (Three Modelling styles).<br>
 Day-4 : 8x1 Mux by 4x1 mux and 2x1 mux.<br>
+Day-5 : 8x1 Demux (Three Modelling styles).<br>
+Day-6 : 8x1 Demux by 2x1 mux and 4x1 mux.<br>
