@@ -17,7 +17,7 @@ Day-7 : 8:3 enocder (Three Modelling styles).<br>
 Day-8 : 3:8 decoder (Three Modelling styles).<br>
 Day-9 : 8:3 priority enocder (Bhevioural model).<br>
 Day-10 : RIPPLE CARRY ADDER. <br>
-Day-11 : BDD TO 7 SEGMENT. <br>
+Day-11 : BCD TO 7 SEGMENT. <br>
 Day-12 : BINARY TO GRAY (Three Modelling styles). <br>
 Day-13 : GRAY TO BINARY (Three Modelling styles).<br>
 Day-14 : COMPARATOR 4 BIT(Bhevioural model).<br>
