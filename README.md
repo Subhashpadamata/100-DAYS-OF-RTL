@@ -17,9 +17,9 @@ Day-7 : 8:3 enocder (Three Modelling styles).<br>
 Day-8 : 3:8 decoder (Three Modelling styles).<br>
 Day-9 : 8:3 priority enocder (Bhevioural model).<br>
 Day-10 : RIPPLE CARRY ADDER. <br>
-Day-11 : FULL ADDER (Three Modelling styles). <br>
-Day-12 : FULL SUBTRACTOR (Three Modelling styles). <br>
-Day-13 : 8x1 Mux (Three Modelling styles).<br>
-Day-14 : 8x1 Mux by 4x1 mux and 2x1 mux.<br>
-Day-15 : 8x1 Demux (Three Modelling styles).<br>
-Day-16 : 8x1 Demux by 2x1 mux and 4x1 mux.<br>
+Day-11 : BDD TO 7 SEGMENT. <br>
+Day-12 : BINARY TO GRAY (Three Modelling styles). <br>
+Day-13 : GRAY TO BINARY (Three Modelling styles).<br>
+Day-14 : COMPARATOR 4 BIT(Bhevioural model).<br>
+Day-15 : CLK DIVIDE BY 2.<br>
+Day-16 : ADDER-SUBTRACTOR.<br>
