@@ -16,7 +16,7 @@ Day-6 : 8x1 Demux by 2x1 mux and 4x1 mux.<br>
 Day-7 : 8:3 enocder (Three Modelling styles).<br>
 Day-8 : 3:8 decoder (Three Modelling styles).<br>
 Day-9 : 8:3 priority enocder (Bhevioural model).<br>
-Day-10 : FULL ADDER (Three Modelling styles). <br>
+Day-10 : RIPPLE CARRY ADDER. <br>
 Day-11 : FULL ADDER (Three Modelling styles). <br>
 Day-12 : FULL SUBTRACTOR (Three Modelling styles). <br>
 Day-13 : 8x1 Mux (Three Modelling styles).<br>
