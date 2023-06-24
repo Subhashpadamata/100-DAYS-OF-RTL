@@ -23,3 +23,4 @@ Day-13 : GRAY TO BINARY (Three Modelling styles).<br>
 Day-14 : COMPARATOR 4 BIT(Bhevioural model).<br>
 Day-15 : CLK DIVIDE BY 2.<br>
 Day-16 : ADDER-SUBTRACTOR.<br>
+Day-17 : CARRY SAVE ADDER(Structural model).<br>
