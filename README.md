@@ -25,3 +25,4 @@ Day-15 : CLK DIVIDE BY 2.<br>
 Day-16 : ADDER-SUBTRACTOR.<br>
 Day-17 : CARRY SAVE ADDER(Structural model).<br>
 Day-18 : CARRY SELECT ADDER(Structural model).<br>
+Day-19 : FLIPFLOPS (Behavioural model).<br>
