@@ -26,3 +26,12 @@ Day-16 : ADDER-SUBTRACTOR.<br>
 Day-17 : CARRY SAVE ADDER(Structural model).<br>
 Day-18 : CARRY SELECT ADDER(Structural model).<br>
 Day-19 : FLIPFLOPS (Behavioural model).<br>
+Day-20 : Multiplier 4-Bit.<br>
+Day-21 : Vedic Multiplier 4-Bit.<br>
+Day-22 : Counters.<br>
+Day-23 : Serial in Serial Out shift register(SISO).<br>
+Day-24 : Serial in parallel Out shift register(SISO)<br>
+Day-25 : parallel in parallel Out shift register(SISO)<br>
+Day-26 : parallel in Serial Out shift register(SISO)<br>
+Day-27 : <br>
+Day-28 : <br>
