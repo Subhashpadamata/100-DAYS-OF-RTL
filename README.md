@@ -35,6 +35,6 @@ Day-25 : parallel in parallel Out shift register.(PIPO)<br>
 Day-26 : parallel in Serial Out shift register.(PISO)<br>
 Day-27 : Bidirectional Shift register.<br>
 Day-28 : Universal Shift Register.<br>
-Day-29 : Bidirectional Shift register<br>
-Day-30 :Johnson counter<br>
+Day-29 : Johnson counter<br>
+Day-30 : 4-Bit Divider <br>
 
