@@ -38,5 +38,6 @@ Day-028 : Universal Shift Register.<br>
 Day-029 : Johnson counter<br>
 Day-030 : 4-Bit Divider <br>
 Day-031 : ALU 8-bit<br>
-Day-032 : Swapping of two numbers<br>
+Day-032 : Ring Oscillator.<br>
+Day-033 : Swapping of two numbers<br>
 
