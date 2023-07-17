@@ -40,4 +40,4 @@ Day-030 : 4-Bit Divider <br>
 Day-031 : ALU 8-bit<br>
 Day-032 : Ring Oscillator.<br>
 Day-033 : Swapping of two numbers<br>
-
+Day-034 : N bit square number.<br>
