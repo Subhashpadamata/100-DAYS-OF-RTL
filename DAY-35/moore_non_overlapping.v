@@ -53,7 +53,7 @@ module moore_non_overlapping(
             next_state = s4;
             dout = 1'b0; end
             else begin
-            next_state = current_state;
+            next_state = s0;
             dout = 1'b0; end
              
         s4: if(din==1) begin
