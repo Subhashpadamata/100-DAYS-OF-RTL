@@ -41,3 +41,7 @@ Day-031 : ALU 8-bit<br>
 Day-032 : Ring Oscillator.<br>
 Day-033 : Swapping of two numbers<br>
 Day-034 : N bit square number.<br>
+Day-035 : Mealy Non-overlapping.<br>
+Day-036 : Mealy overlapping.<br>
+Day-037 : Moore Non-overlapping.<br>
+Day-038 : Moore overlapping.<br>
