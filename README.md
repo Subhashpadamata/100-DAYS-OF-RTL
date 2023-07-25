@@ -45,3 +45,5 @@ Day-035 : Moore Non-overlapping.<br>
 Day-036 : Moore overlapping.<br>
 Day-037 : Mealy Non-overlapping.<br>
 Day-038 : Mealy overlapping.<br>
+Day-039 : Mod 12 synchronous up/down counter.<br>
+Day-040 : Carry look ahead adder.<br>
