@@ -48,3 +48,17 @@ Day-038 : Mealy overlapping.<br>
 Day-039 : Mod 12 synchronous up/down counter.<br>
 Day-040 : Carry look ahead adder.<br>
 Day-041 : D-flipflop by SR flipflop.<br>
+Day-042 : T-flipflop by SR flipflop.<br>
+Day-043 : JK-flipflop by SR flipflop.<br>
+Day-044 : D-flipflop by JK flipflop.<br>
+Day-045 : T-flipflop by JK flipflop.<br>
+Day-046 : SR-flipflop by JK flipflop.<br>
+Day-047 : SR-flipflop by D flipflop.<br>
+Day-048 : JK-flipflop by D flipflop.<br>
+Day-049 : T-flipflop by D flipflop.<br>
+Day-050 : SR-flipflop by T flipflop.<br>
+Day-051 : JK-flipflop by T flipflop.<br>
+Day-052 : D-flipflop by T flipflop.<br>
+Day-053 : FULL ADDER BY DECODER.<br>
+Day-054 : GATES BY 2X1 MUX.<br>
+Day-055 : LINEAR FEEDBACK SHIFT REGISTER.<br>
