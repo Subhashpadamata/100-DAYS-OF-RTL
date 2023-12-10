@@ -62,3 +62,4 @@ Day-052 : D-flipflop by T flipflop.<br>
 Day-053 : FULL ADDER BY DECODER.<br>
 Day-054 : GATES BY 2X1 MUX.<br>
 Day-055 : LINEAR FEEDBACK SHIFT REGISTER.<br>
+Day-056 : FIR Filter 8-bit.<br>
