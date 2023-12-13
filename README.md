@@ -63,3 +63,5 @@ Day-053 : FULL ADDER BY DECODER.<br>
 Day-054 : GATES BY 2X1 MUX.<br>
 Day-055 : LINEAR FEEDBACK SHIFT REGISTER.<br>
 Day-056 : FIR Filter 8-bit.<br>
+Day-057 : Frequency divide 3 and 4.<br>
+Day-058 : Frequency divide 1.5.<br>
