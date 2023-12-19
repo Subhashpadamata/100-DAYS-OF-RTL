@@ -71,4 +71,4 @@ Day-061 : Fixed priority arbiter.<br>
 Day-062 : Round Robin Arbiter.<br>
 Day-063 : Synchronous FIFO.<br>
 Day-064 : Traffic Light Controller.<br>
-Day-065 : <br>
+Day-065 : PWM Generator<br>
