@@ -66,3 +66,9 @@ Day-056 : FIR Filter 8-bit.<br>
 Day-057 : SRAM.<br>
 Day-058 : Frequency divide 3 and 4.<br>
 Day-059 : Frequency divide 1.5.<br>
+Day-060 : Barrel shifter.<br>
+Day-061 : Fixed priority arbiter.<br>
+Day-062 : Round Robin Arbiter.<br>
+Day-063 : Synchronous FIFO.<br>
+Day-064 : Traffic Light Controller.<br>
+Day-065 : <br>
