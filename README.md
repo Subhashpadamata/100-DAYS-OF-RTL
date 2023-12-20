@@ -72,3 +72,4 @@ Day-062 : Round Robin Arbiter.<br>
 Day-063 : Synchronous FIFO.<br>
 Day-064 : Traffic Light Controller.<br>
 Day-065 : PWM Generator<br>
+Day-066 : CAR PARKING SYSTEM.<br>
