@@ -12,7 +12,7 @@ Day-002 : FULL SUBTRACTOR (Three Modelling styles). <br>
 Day-003 : 8x1 Mux (Three Modelling styles).<br>
 Day-004 : 8x1 Mux by 4x1 mux and 2x1 mux.<br>
 Day-005 : 8x1 Demux (Three Modelling styles).<br>
-Day-006 : 8x1 Demux by 2x1 mux and 4x1 mux.<br>
+Day-006 : 1x8 Demux by 1x2 demux and 1x4 demux.<br>
 Day-007 : 8:3 enocder (Three Modelling styles).<br>
 Day-008 : 3:8 decoder (Three Modelling styles).<br>
 Day-009 : 8:3 priority enocder (Bhevioural model).<br>
