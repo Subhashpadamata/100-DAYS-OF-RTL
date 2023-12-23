@@ -74,3 +74,4 @@ Day-064 : Traffic Light Controller.<br>
 Day-065 : PWM Generator<br>
 Day-066 : CAR PARKING SYSTEM.<br>
 Day-067 : LAST IN FIRST OUT (STACK).<br>
+Day-068 : DUAL PORT RAM.<br>
