@@ -43,40 +43,45 @@ end
 
 always @(din or current_state) begin
     case (current_state)
-        s0: if (din == 1) begin
+        s0: dout <= 1'b0;
+            if (din == 1) begin
             next_state = s1;
-            dout = 1'b0; end
+             end
             else begin
             next_state = current_state;
-            dout = 1'b0; end
+            end
             
-        s1: if (din == 0) begin
+        s1: dout <= 1'b0;
+            if (din == 0) begin
             next_state = s2;
-            dout = 1'b0; end
+            end
             else begin
             next_state = current_state;
-            dout = 1'b0; end	 
+            end	 
              
-        s2: if (din == 0) begin
+        s2: dout <= 1'b0;
+            if (din == 0) begin
             next_state = s3;
-            dout = 1'b0; end
+            end
             else begin
             next_state = s1;
-            dout = 1'b0; end
+            end
         
-        s3: if (din == 1) begin
+        s3: dout <= 1'b0;
+            if (din == 1) begin
             next_state = s4;
-            dout = 1'b0; end
+            end
             else begin
             next_state = s0;
-            dout = 1'b0; end
+            end
              
-        s4: if (din == 1) begin
+        s4: dout <= 1'b1;
+            if (din == 1) begin
             next_state = s1;
-            dout = 1'b1; end
+             end
             else begin
             next_state = s2;
-            dout = 1'b1; end	 
+            end	 
              
         default: next_state = s0;
     endcase
