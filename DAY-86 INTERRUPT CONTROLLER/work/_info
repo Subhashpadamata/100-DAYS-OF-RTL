@@ -1,0 +1,55 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/MODEL_SIM/VERILOG_ASSIGNMENT_FILES/ASSIGNMENT_15_INTERRUPT_CONTROLLER
+vinterrupt_controller
+Z0 !s110 1732201412
+!i10b 1
+!s100 7L;`g7VEXZDgRQ;2KNK^:2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I::>0dcR;2`bX_5Vg_hM]G3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/subha/Desktop/vlsi guru verilog/verilog projects/IC/ASSIGNMENT_15_INTERRUPT_CONTROLLER
+w1728292663
+8ic.v
+Fic.v
+!i122 1
+L0 1 124
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1732201412.000000
+!s107 ic.v|tb.v|
+Z6 !s90 -reportprogress|300|tb.v|
+!i113 1
+Z7 tCvgOpt 0
+vtb
+R0
+!i10b 1
+!s100 BR3ZJMRCDk=a[o2ja2@>M1
+R1
+IbmVDfIIB:dR^eMDOCJ1hg3
+R2
+R3
+w1713269833
+8tb.v
+Ftb.v
+!i122 1
+L0 2 113
+R4
+r1
+!s85 0
+31
+R5
+Z8 !s107 ic.v|tb.v|
+R6
+!i113 1
+R7

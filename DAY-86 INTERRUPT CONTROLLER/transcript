@@ -1,0 +1,38 @@
+# Reading pref.tcl
+# do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:33:32 on Nov 21,2024
+# vlog -reportprogress 300 tb.v 
+# -- Compiling module interrupt_controller
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 20:33:32 on Nov 21,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim tb 
+# Start time: 20:33:32 on Nov 21,2024
+# Loading work.tb
+# Loading work.interrupt_controller
+# intr_number=0, priority_array=7
+# intr_number=1, priority_array=12
+# intr_number=2, priority_array=8
+# intr_number=3, priority_array=6
+# intr_number=4, priority_array=4
+# intr_number=5, priority_array=0
+# intr_number=6, priority_array=9
+# intr_number=7, priority_array=11
+# intr_number=8, priority_array=1
+# intr_number=9, priority_array=2
+# intr_number=10, priority_array=5
+# intr_number=11, priority_array=14
+# intr_number=12, priority_array=3
+# intr_number=13, priority_array=13
+# intr_number=14, priority_array=15
+# intr_number=15, priority_array=10
+# ** Note: $finish    : tb.v(48)
+#    Time: 845 ps  Iteration: 0  Instance: /tb
+# 1
+# Break in Module tb at tb.v line 48
+# WARNING: No extended dataflow license exists
