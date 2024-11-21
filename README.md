@@ -2,7 +2,8 @@
 
 HELLO VLSI ENTHUSIASTS, WELCOME TO MY 100DAYSOFRTL REPO
 
-My Name is Subhash padamata, I mostly use Xilinx VIVADO Design Suite for the simulation of RTL Codes.
+My Name is Subhash padamata, I mostly use Xilinx VIVADO and Modelsim for the simulation of RTL Codes. For verification i used Questasim and Synopsys VCS for System verilog (SV) and Universal Verification Methodology (UVM).
+
 <hr>
   
 <h2>Here is the list of Day wise RTL Codes:</h2>
