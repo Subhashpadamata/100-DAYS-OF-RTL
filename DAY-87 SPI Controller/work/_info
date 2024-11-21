@@ -1,0 +1,55 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/MODEL_SIM/VERILOG_ASSIGNMENT_FILES/ASSIGNMENT_18_SPI_PROTOCOL
+vspi
+Z0 !s110 1732209338
+!i10b 1
+!s100 :L;XZm6o86nXYW;j2WE603
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IEKfgOhC1dd2;?jo89bJIg1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/subha/Documents/100-DAYS-OF-RTL/100-DAYS-OF-RTL/DAY-87 SPI Controller
+Z4 w1713269808
+8spi.v
+Fspi.v
+!i122 1
+L0 1 183
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1732209338.000000
+!s107 spi.v|tb.v|
+Z7 !s90 -reportprogress|300|tb.v|
+!i113 1
+Z8 tCvgOpt 0
+vtb
+R0
+!i10b 1
+!s100 n3HGNW:<@gPSazc<gAKPW3
+R1
+IHflElnSH`40`Ee@o6@LNl2
+R2
+R3
+R4
+8tb.v
+Ftb.v
+!i122 1
+L0 3 119
+R5
+r1
+!s85 0
+31
+R6
+Z9 !s107 spi.v|tb.v|
+R7
+!i113 1
+R8
