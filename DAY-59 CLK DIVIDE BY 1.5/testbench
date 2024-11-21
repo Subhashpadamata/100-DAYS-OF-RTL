@@ -1,0 +1,18 @@
+`timescale 1ns / 1ps
+
+module testbench; //testbench for clock divide by 1.5
+    reg clk,reset;
+    wire q;
+    
+    clk_divide dut(clk,reset,q);
+    initial
+    begin
+        $monitor("clk=%d reset =%d q=%d",clk,reset,q);
+        clk = 0;
+        reset = 1;
+        #20 reset = 0;
+        #100 $finish;
+    end
+    
+    always #5 clk = ~clk;
+endmodule

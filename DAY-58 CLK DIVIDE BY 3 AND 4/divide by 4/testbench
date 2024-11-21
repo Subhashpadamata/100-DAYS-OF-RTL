@@ -1,0 +1,17 @@
+`timescale 1ns / 1ps
+
+module testbench();
+    reg clk,reset;
+    wire q;
+    divide_by_4 dut(clk,reset,q);
+ 
+    always #5 clk=~clk;
+    
+    initial
+    begin
+        clk=0;
+        reset=1;
+        #20 reset=0;
+        #100 $finish;
+    end
+endmodule
