@@ -27888,3 +27888,3856 @@ do run3.do
 #    Time: 2425 ns  Iteration: 1  Instance: /top
 # 1
 # Break in Module top at top.sv line 78
+do run_regr.do
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 22:14:24 on Nov 24,2024
+# vlog -reportprogress 300 top.sv 
+# -- Compiling package top_sv_unit
+# -- Compiling module memory
+# -- Compiling module assertions
+# -- Compiling interface mem_intf
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 22:14:24 on Nov 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vopt 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 22:14:25 on Nov 24,2024
+# vopt -reportprogress 300 top "+cover=fcbest" -o n_wr_rd_test 
+# 
+# Top level modules:
+# 	top
+# 
+# Analyzing design...
+# -- Loading module top
+# -- Loading interface mem_intf
+# -- Loading module memory
+# -- Loading module assertions
+# ** Warning: top.sv(25): (vopt-2241) Connection width does not match width of port 'addr_i'. The port definition is at: memory.sv(1).
+# ** Warning: top.sv(25): (vopt-2241) Connection width does not match width of port 'wdata_i'. The port definition is at: memory.sv(1).
+# ** Warning: top.sv(25): (vopt-2241) Connection width does not match width of port 'rdata_o'. The port definition is at: memory.sv(1).
+# Incremental compilation check found no design-units (out of 6) may be reused.
+# Optimizing 6 design-units (inlining 3/4 module instances):
+# -- Inlining interface mem_intf(fast)
+# -- Inlining module memory(fast)
+# -- Inlining module assertions(fast)
+# -- Optimizing module top(fast)
+# -- Optimizing interface mem_intf(fast)
+# -- Optimizing package top_sv_unit(fast)
+# Optimized design name is n_wr_rd_test
+# End time: 22:14:26 on Nov 24,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 3
+# filef7343c0
+# End time: 22:14:31 on Nov 24,2024, Elapsed time: 0:03:08
+# Errors: 0, Warnings: 4
+# vsim -coverage n_wr_rd_test "+testname=wr_rd_test" "+num_tx=30" "+num_agents=2" -novopt -suppress 12110 
+# Start time: 22:14:31 on Nov 24,2024
+# ** Warning: (vsim-8891) -novopt option has no effect when used with the optimized design. -novopt option is now deprecated and will be removed in future releases.
+# Loading sv_std.std
+# Loading work.top_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.mem_intf(fast)
+# ** Error: Cannot open macro file: exclusion.do
+# Error in macro ./run_regr.do line 18
+# Cannot open macro file: exclusion.do
+#     while executing
+# "do exclusion.do"
+#     ("while" body line 4)
+#     invoked from within
+# "while { [gets $fp testname] >= 0 } {
+#     # Run simulation and coverage analysis for each test
+#     vsim -coverage n_wr_rd_test +testname=$testname +num..."
+do run_regr.do
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 22:15:04 on Nov 24,2024
+# vlog -reportprogress 300 top.sv 
+# -- Compiling package top_sv_unit
+# -- Compiling module memory
+# -- Compiling module assertions
+# -- Compiling interface mem_intf
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 22:15:04 on Nov 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vopt 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 22:15:04 on Nov 24,2024
+# vopt -reportprogress 300 top "+cover=fcbest" -o n_wr_rd_test 
+# 
+# Top level modules:
+# 	top
+# 
+# Analyzing design...
+# -- Loading module top
+# -- Loading interface mem_intf
+# -- Loading module memory
+# -- Loading module assertions
+# ** Warning: top.sv(25): (vopt-2241) Connection width does not match width of port 'addr_i'. The port definition is at: memory.sv(1).
+# ** Warning: top.sv(25): (vopt-2241) Connection width does not match width of port 'wdata_i'. The port definition is at: memory.sv(1).
+# ** Warning: top.sv(25): (vopt-2241) Connection width does not match width of port 'rdata_o'. The port definition is at: memory.sv(1).
+# Incremental compilation check found no design-units have changed.
+# Optimized design name is n_wr_rd_test
+# End time: 22:15:04 on Nov 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# file1d3738b0
+# End time: 22:15:05 on Nov 24,2024, Elapsed time: 0:00:34
+# Errors: 3, Warnings: 1
+# vsim -coverage n_wr_rd_test "+testname=wr_rd_test" "+num_tx=30" "+num_agents=2" -novopt -suppress 12110 
+# Start time: 22:15:05 on Nov 24,2024
+# ** Warning: (vsim-8891) -novopt option has no effect when used with the optimized design. -novopt option is now deprecated and will be removed in future releases.
+# Loading sv_std.std
+# Loading work.top_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.mem_intf(fast)
+# num_agents=2
+# num_tx=30
+# gen from agent[0]
+# bfm from agent[0]
+# mon from agent[0]
+# cov from agent[0]
+# gen from agent[1]
+# bfm from agent[1]
+# mon from agent[1]
+# cov from agent[1]
+# i=0
+# from bfm 15 
+# 
+# 
+# mon from agent[0]
+# executing monitor on memory
+# cov from agent[0]
+# executing coverage functionality at 15
+# i=1
+# from bfm 15 
+# 
+# 
+# mon from agent[1]
+# executing monitor on memory
+# cov from agent[1]
+# executing coverage functionality at 15
+# from bfm 25 
+# 
+# 
+# valid tx detected 25
+# valid tx detected 25
+# -----------------printing write agent---------------
+# 	 count=1 
+# 	 addr=12160
+# 	 data=927591996
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=2 
+# 	 addr=12160
+# 	 data=927591996
+# 	 wr_rd=1 
+# from bfm 45 
+# 
+# 
+# valid tx detected 45
+# valid tx detected 45
+# -----------------printing  read agent---------------
+# 	 count=3 
+# 	 addr=12160
+# 	 data=60988
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=4 
+# 	 addr=12160
+# 	 data=60988
+# 	 wr_rd=0 
+# valid tx detected 65
+# valid tx detected 65
+# -----------------printing write agent---------------
+# 	 count=5 
+# 	 addr=2217
+# 	 data=2384979111
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=6 
+# 	 addr=2217
+# 	 data=2384979111
+# 	 wr_rd=1 
+# valid tx detected 85
+# valid tx detected 85
+# -----------------printing  read agent---------------
+# 	 count=7 
+# 	 addr=2217
+# 	 data=58535
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=8 
+# 	 addr=2217
+# 	 data=58535
+# 	 wr_rd=0 
+# ** Note: $finish    : top.sv(78)
+#    Time: 105 ns  Iteration: 1  Instance: /top
+# 1
+# Break in Module top at top.sv line 78
+# End time: 22:15:11 on Nov 24,2024, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 1
+# vsim -coverage n_wr_rd_test "+testname=n_wr_rd_test" "+num_tx=30" "+num_agents=2" -novopt -suppress 12110 
+# Start time: 22:15:12 on Nov 24,2024
+# ** Warning: (vsim-8891) -novopt option has no effect when used with the optimized design. -novopt option is now deprecated and will be removed in future releases.
+# Loading sv_std.std
+# Loading work.top_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.mem_intf(fast)
+# num_agents=2
+# num_tx=30
+# gen from agent[0]
+# bfm from agent[0]
+# mon from agent[0]
+# cov from agent[0]
+# gen from agent[1]
+# bfm from agent[1]
+# mon from agent[1]
+# cov from agent[1]
+# i=0
+# from bfm 15 
+# 
+# 
+# mon from agent[0]
+# executing monitor on memory
+# cov from agent[0]
+# executing coverage functionality at 15
+# i=1
+# from bfm 15 
+# 
+# 
+# mon from agent[1]
+# executing monitor on memory
+# cov from agent[1]
+# executing coverage functionality at 15
+# from bfm 25 
+# 
+# 
+# valid tx detected 25
+# valid tx detected 25
+# -----------------printing write agent---------------
+# 	 count=1 
+# 	 addr=12160
+# 	 data=927591996
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=2 
+# 	 addr=12160
+# 	 data=927591996
+# 	 wr_rd=1 
+# from bfm 45 
+# 
+# 
+# valid tx detected 45
+# valid tx detected 45
+# -----------------printing  read agent---------------
+# 	 count=3 
+# 	 addr=12160
+# 	 data=60988
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=4 
+# 	 addr=12160
+# 	 data=60988
+# 	 wr_rd=0 
+# from bfm 65 
+# 
+# 
+# valid tx detected 65
+# valid tx detected 65
+# -----------------printing write agent---------------
+# 	 count=5 
+# 	 addr=49869
+# 	 data=1841119507
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=6 
+# 	 addr=49869
+# 	 data=1841119507
+# 	 wr_rd=1 
+# from bfm 85 
+# 
+# 
+# valid tx detected 85
+# valid tx detected 85
+# -----------------printing  read agent---------------
+# 	 count=7 
+# 	 addr=49869
+# 	 data=16659
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=8 
+# 	 addr=49869
+# 	 data=16659
+# 	 wr_rd=0 
+# from bfm 105 
+# 
+# 
+# valid tx detected 105
+# valid tx detected 105
+# -----------------printing write agent---------------
+# 	 count=9 
+# 	 addr=8629
+# 	 data=1826442637
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=10 
+# 	 addr=8629
+# 	 data=1826442637
+# 	 wr_rd=1 
+# from bfm 125 
+# 
+# 
+# valid tx detected 125
+# valid tx detected 125
+# -----------------printing  read agent---------------
+# 	 count=11 
+# 	 addr=8629
+# 	 data=19853
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=12 
+# 	 addr=8629
+# 	 data=19853
+# 	 wr_rd=0 
+# from bfm 145 
+# 
+# 
+# valid tx detected 145
+# valid tx detected 145
+# -----------------printing write agent---------------
+# 	 count=13 
+# 	 addr=33790
+# 	 data=4005147256
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=14 
+# 	 addr=33790
+# 	 data=4005147256
+# 	 wr_rd=1 
+# from bfm 165 
+# 
+# 
+# valid tx detected 165
+# valid tx detected 165
+# -----------------printing  read agent---------------
+# 	 count=15 
+# 	 addr=33790
+# 	 data=45688
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=16 
+# 	 addr=33790
+# 	 data=45688
+# 	 wr_rd=0 
+# from bfm 185 
+# 
+# 
+# valid tx detected 185
+# valid tx detected 185
+# -----------------printing write agent---------------
+# 	 count=17 
+# 	 addr=58876
+# 	 data=2121816173
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=18 
+# 	 addr=58876
+# 	 data=2121816173
+# 	 wr_rd=1 
+# from bfm 205 
+# 
+# 
+# valid tx detected 205
+# valid tx detected 205
+# -----------------printing  read agent---------------
+# 	 count=19 
+# 	 addr=58876
+# 	 data=22637
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=20 
+# 	 addr=58876
+# 	 data=22637
+# 	 wr_rd=0 
+# from bfm 225 
+# 
+# 
+# valid tx detected 225
+# valid tx detected 225
+# -----------------printing write agent---------------
+# 	 count=21 
+# 	 addr=9517
+# 	 data=2395793994
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=22 
+# 	 addr=9517
+# 	 data=2395793994
+# 	 wr_rd=1 
+# from bfm 245 
+# 
+# 
+# valid tx detected 245
+# valid tx detected 245
+# -----------------printing  read agent---------------
+# 	 count=23 
+# 	 addr=9517
+# 	 data=59978
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=24 
+# 	 addr=9517
+# 	 data=59978
+# 	 wr_rd=0 
+# from bfm 265 
+# 
+# 
+# valid tx detected 265
+# valid tx detected 265
+# -----------------printing write agent---------------
+# 	 count=25 
+# 	 addr=50177
+# 	 data=453484432
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=26 
+# 	 addr=50177
+# 	 data=453484432
+# 	 wr_rd=1 
+# from bfm 285 
+# 
+# 
+# valid tx detected 285
+# valid tx detected 285
+# -----------------printing  read agent---------------
+# 	 count=27 
+# 	 addr=50177
+# 	 data=40848
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=28 
+# 	 addr=50177
+# 	 data=40848
+# 	 wr_rd=0 
+# from bfm 305 
+# 
+# 
+# valid tx detected 305
+# valid tx detected 305
+# -----------------printing write agent---------------
+# 	 count=29 
+# 	 addr=40554
+# 	 data=37714716
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=30 
+# 	 addr=40554
+# 	 data=37714716
+# 	 wr_rd=1 
+# from bfm 325 
+# 
+# 
+# valid tx detected 325
+# valid tx detected 325
+# -----------------printing  read agent---------------
+# 	 count=31 
+# 	 addr=40554
+# 	 data=31516
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=32 
+# 	 addr=40554
+# 	 data=31516
+# 	 wr_rd=0 
+# from bfm 345 
+# 
+# 
+# valid tx detected 345
+# valid tx detected 345
+# -----------------printing write agent---------------
+# 	 count=33 
+# 	 addr=2370
+# 	 data=1828986021
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=34 
+# 	 addr=2370
+# 	 data=1828986021
+# 	 wr_rd=1 
+# from bfm 365 
+# 
+# 
+# valid tx detected 365
+# valid tx detected 365
+# -----------------printing  read agent---------------
+# 	 count=35 
+# 	 addr=2370
+# 	 data=7333
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=36 
+# 	 addr=2370
+# 	 data=7333
+# 	 wr_rd=0 
+# from bfm 385 
+# 
+# 
+# valid tx detected 385
+# valid tx detected 385
+# -----------------printing write agent---------------
+# 	 count=37 
+# 	 addr=37426
+# 	 data=130387624
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=38 
+# 	 addr=37426
+# 	 data=130387624
+# 	 wr_rd=1 
+# from bfm 405 
+# 
+# 
+# valid tx detected 405
+# valid tx detected 405
+# -----------------printing  read agent---------------
+# 	 count=39 
+# 	 addr=37426
+# 	 data=36520
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=40 
+# 	 addr=37426
+# 	 data=36520
+# 	 wr_rd=0 
+# from bfm 425 
+# 
+# 
+# valid tx detected 425
+# valid tx detected 425
+# -----------------printing write agent---------------
+# 	 count=41 
+# 	 addr=19665
+# 	 data=4050134868
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=42 
+# 	 addr=19665
+# 	 data=4050134868
+# 	 wr_rd=1 
+# from bfm 445 
+# 
+# 
+# valid tx detected 445
+# valid tx detected 445
+# -----------------printing  read agent---------------
+# 	 count=43 
+# 	 addr=19665
+# 	 data=10068
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=44 
+# 	 addr=19665
+# 	 data=10068
+# 	 wr_rd=0 
+# from bfm 465 
+# 
+# 
+# valid tx detected 465
+# valid tx detected 465
+# -----------------printing write agent---------------
+# 	 count=45 
+# 	 addr=56227
+# 	 data=2436870217
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=46 
+# 	 addr=56227
+# 	 data=2436870217
+# 	 wr_rd=1 
+# from bfm 485 
+# 
+# 
+# valid tx detected 485
+# valid tx detected 485
+# -----------------printing  read agent---------------
+# 	 count=47 
+# 	 addr=56227
+# 	 data=45129
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=48 
+# 	 addr=56227
+# 	 data=45129
+# 	 wr_rd=0 
+# from bfm 505 
+# 
+# 
+# valid tx detected 505
+# valid tx detected 505
+# -----------------printing write agent---------------
+# 	 count=49 
+# 	 addr=20374
+# 	 data=2218458672
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=50 
+# 	 addr=20374
+# 	 data=2218458672
+# 	 wr_rd=1 
+# from bfm 525 
+# 
+# 
+# valid tx detected 525
+# valid tx detected 525
+# -----------------printing  read agent---------------
+# 	 count=51 
+# 	 addr=20374
+# 	 data=65072
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=52 
+# 	 addr=20374
+# 	 data=65072
+# 	 wr_rd=0 
+# from bfm 545 
+# 
+# 
+# valid tx detected 545
+# valid tx detected 545
+# -----------------printing write agent---------------
+# 	 count=53 
+# 	 addr=55252
+# 	 data=1826709813
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=54 
+# 	 addr=55252
+# 	 data=1826709813
+# 	 wr_rd=1 
+# from bfm 565 
+# 
+# 
+# valid tx detected 565
+# valid tx detected 565
+# -----------------printing  read agent---------------
+# 	 count=55 
+# 	 addr=55252
+# 	 data=24885
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=56 
+# 	 addr=55252
+# 	 data=24885
+# 	 wr_rd=0 
+# from bfm 585 
+# 
+# 
+# valid tx detected 585
+# valid tx detected 585
+# -----------------printing write agent---------------
+# 	 count=57 
+# 	 addr=60356
+# 	 data=2069343973
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=58 
+# 	 addr=60356
+# 	 data=2069343973
+# 	 wr_rd=1 
+# from bfm 605 
+# 
+# 
+# valid tx detected 605
+# valid tx detected 605
+# -----------------printing  read agent---------------
+# 	 count=59 
+# 	 addr=60356
+# 	 data=44773
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=60 
+# 	 addr=60356
+# 	 data=44773
+# 	 wr_rd=0 
+# from bfm 625 
+# 
+# 
+# valid tx detected 625
+# valid tx detected 625
+# -----------------printing write agent---------------
+# 	 count=61 
+# 	 addr=57866
+# 	 data=463554308
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=62 
+# 	 addr=57866
+# 	 data=463554308
+# 	 wr_rd=1 
+# from bfm 645 
+# 
+# 
+# valid tx detected 645
+# valid tx detected 645
+# -----------------printing  read agent---------------
+# 	 count=63 
+# 	 addr=57866
+# 	 data=18180
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=64 
+# 	 addr=57866
+# 	 data=18180
+# 	 wr_rd=0 
+# from bfm 665 
+# 
+# 
+# valid tx detected 665
+# valid tx detected 665
+# -----------------printing write agent---------------
+# 	 count=65 
+# 	 addr=5838
+# 	 data=820062601
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=66 
+# 	 addr=5838
+# 	 data=820062601
+# 	 wr_rd=1 
+# from bfm 685 
+# 
+# 
+# valid tx detected 685
+# valid tx detected 685
+# -----------------printing  read agent---------------
+# 	 count=67 
+# 	 addr=5838
+# 	 data=10633
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=68 
+# 	 addr=5838
+# 	 data=10633
+# 	 wr_rd=0 
+# from bfm 705 
+# 
+# 
+# valid tx detected 705
+# valid tx detected 705
+# -----------------printing write agent---------------
+# 	 count=69 
+# 	 addr=52890
+# 	 data=1540775592
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=70 
+# 	 addr=52890
+# 	 data=1540775592
+# 	 wr_rd=1 
+# from bfm 725 
+# 
+# 
+# valid tx detected 725
+# valid tx detected 725
+# -----------------printing  read agent---------------
+# 	 count=71 
+# 	 addr=52890
+# 	 data=24232
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=72 
+# 	 addr=52890
+# 	 data=24232
+# 	 wr_rd=0 
+# from bfm 745 
+# 
+# 
+# valid tx detected 745
+# valid tx detected 745
+# -----------------printing write agent---------------
+# 	 count=73 
+# 	 addr=46653
+# 	 data=1259681047
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=74 
+# 	 addr=46653
+# 	 data=1259681047
+# 	 wr_rd=1 
+# from bfm 765 
+# 
+# 
+# valid tx detected 765
+# valid tx detected 765
+# -----------------printing  read agent---------------
+# 	 count=75 
+# 	 addr=46653
+# 	 data=13591
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=76 
+# 	 addr=46653
+# 	 data=13591
+# 	 wr_rd=0 
+# from bfm 785 
+# 
+# 
+# valid tx detected 785
+# valid tx detected 785
+# -----------------printing write agent---------------
+# 	 count=77 
+# 	 addr=45501
+# 	 data=138432249
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=78 
+# 	 addr=45501
+# 	 data=138432249
+# 	 wr_rd=1 
+# from bfm 805 
+# 
+# 
+# valid tx detected 805
+# valid tx detected 805
+# -----------------printing  read agent---------------
+# 	 count=79 
+# 	 addr=45501
+# 	 data=20217
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=80 
+# 	 addr=45501
+# 	 data=20217
+# 	 wr_rd=0 
+# from bfm 825 
+# 
+# 
+# valid tx detected 825
+# valid tx detected 825
+# -----------------printing write agent---------------
+# 	 count=81 
+# 	 addr=45799
+# 	 data=39287071
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=82 
+# 	 addr=45799
+# 	 data=39287071
+# 	 wr_rd=1 
+# from bfm 845 
+# 
+# 
+# valid tx detected 845
+# valid tx detected 845
+# -----------------printing  read agent---------------
+# 	 count=83 
+# 	 addr=45799
+# 	 data=31007
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=84 
+# 	 addr=45799
+# 	 data=31007
+# 	 wr_rd=0 
+# from bfm 865 
+# 
+# 
+# valid tx detected 865
+# valid tx detected 865
+# -----------------printing write agent---------------
+# 	 count=85 
+# 	 addr=8428
+# 	 data=1246113749
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=86 
+# 	 addr=8428
+# 	 data=1246113749
+# 	 wr_rd=1 
+# from bfm 885 
+# 
+# 
+# valid tx detected 885
+# valid tx detected 885
+# -----------------printing  read agent---------------
+# 	 count=87 
+# 	 addr=8428
+# 	 data=12245
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=88 
+# 	 addr=8428
+# 	 data=12245
+# 	 wr_rd=0 
+# from bfm 905 
+# 
+# 
+# valid tx detected 905
+# valid tx detected 905
+# -----------------printing write agent---------------
+# 	 count=89 
+# 	 addr=49741
+# 	 data=645022606
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=90 
+# 	 addr=49741
+# 	 data=645022606
+# 	 wr_rd=1 
+# from bfm 925 
+# 
+# 
+# valid tx detected 925
+# valid tx detected 925
+# -----------------printing  read agent---------------
+# 	 count=91 
+# 	 addr=49741
+# 	 data=17294
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=92 
+# 	 addr=49741
+# 	 data=17294
+# 	 wr_rd=0 
+# from bfm 945 
+# 
+# 
+# valid tx detected 945
+# valid tx detected 945
+# -----------------printing write agent---------------
+# 	 count=93 
+# 	 addr=44240
+# 	 data=2186229531
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=94 
+# 	 addr=44240
+# 	 data=2186229531
+# 	 wr_rd=1 
+# from bfm 965 
+# 
+# 
+# valid tx detected 965
+# valid tx detected 965
+# -----------------printing  read agent---------------
+# 	 count=95 
+# 	 addr=44240
+# 	 data=14107
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=96 
+# 	 addr=44240
+# 	 data=14107
+# 	 wr_rd=0 
+# from bfm 985 
+# 
+# 
+# valid tx detected 985
+# valid tx detected 985
+# -----------------printing write agent---------------
+# 	 count=97 
+# 	 addr=6382
+# 	 data=1499946451
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=98 
+# 	 addr=6382
+# 	 data=1499946451
+# 	 wr_rd=1 
+# from bfm 1005 
+# 
+# 
+# valid tx detected 1005
+# valid tx detected 1005
+# -----------------printing  read agent---------------
+# 	 count=99 
+# 	 addr=6382
+# 	 data=24019
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=100 
+# 	 addr=6382
+# 	 data=24019
+# 	 wr_rd=0 
+# from bfm 1025 
+# 
+# 
+# valid tx detected 1025
+# valid tx detected 1025
+# -----------------printing write agent---------------
+# 	 count=101 
+# 	 addr=32900
+# 	 data=3522194285
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=102 
+# 	 addr=32900
+# 	 data=3522194285
+# 	 wr_rd=1 
+# from bfm 1045 
+# 
+# 
+# valid tx detected 1045
+# valid tx detected 1045
+# -----------------printing  read agent---------------
+# 	 count=103 
+# 	 addr=32900
+# 	 data=27501
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=104 
+# 	 addr=32900
+# 	 data=27501
+# 	 wr_rd=0 
+# from bfm 1065 
+# 
+# 
+# valid tx detected 1065
+# valid tx detected 1065
+# -----------------printing write agent---------------
+# 	 count=105 
+# 	 addr=51545
+# 	 data=838008143
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=106 
+# 	 addr=51545
+# 	 data=838008143
+# 	 wr_rd=1 
+# from bfm 1085 
+# 
+# 
+# valid tx detected 1085
+# valid tx detected 1085
+# -----------------printing  read agent---------------
+# 	 count=107 
+# 	 addr=51545
+# 	 data=64847
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=108 
+# 	 addr=51545
+# 	 data=64847
+# 	 wr_rd=0 
+# from bfm 1105 
+# 
+# 
+# valid tx detected 1105
+# valid tx detected 1105
+# -----------------printing write agent---------------
+# 	 count=109 
+# 	 addr=9874
+# 	 data=565199470
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=110 
+# 	 addr=9874
+# 	 data=565199470
+# 	 wr_rd=1 
+# from bfm 1125 
+# 
+# 
+# valid tx detected 1125
+# valid tx detected 1125
+# -----------------printing  read agent---------------
+# 	 count=111 
+# 	 addr=9874
+# 	 data=17006
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=112 
+# 	 addr=9874
+# 	 data=17006
+# 	 wr_rd=0 
+# from bfm 1145 
+# 
+# 
+# valid tx detected 1145
+# valid tx detected 1145
+# -----------------printing write agent---------------
+# 	 count=113 
+# 	 addr=1048
+# 	 data=2810334891
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=114 
+# 	 addr=1048
+# 	 data=2810334891
+# 	 wr_rd=1 
+# from bfm 1165 
+# 
+# 
+# valid tx detected 1165
+# valid tx detected 1165
+# -----------------printing  read agent---------------
+# 	 count=115 
+# 	 addr=1048
+# 	 data=20139
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=116 
+# 	 addr=1048
+# 	 data=20139
+# 	 wr_rd=0 
+# from bfm 1185 
+# 
+# 
+# valid tx detected 1185
+# valid tx detected 1185
+# -----------------printing write agent---------------
+# 	 count=117 
+# 	 addr=32525
+# 	 data=904755552
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=118 
+# 	 addr=32525
+# 	 data=904755552
+# 	 wr_rd=1 
+# from bfm 1205 
+# 
+# 
+# valid tx detected 1205
+# valid tx detected 1205
+# -----------------printing  read agent---------------
+# 	 count=119 
+# 	 addr=32525
+# 	 data=31072
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=120 
+# 	 addr=32525
+# 	 data=31072
+# 	 wr_rd=0 
+# from bfm 1225 
+# 
+# 
+# valid tx detected 1225
+# valid tx detected 1225
+# -----------------printing write agent---------------
+# 	 count=121 
+# 	 addr=2217
+# 	 data=2384979111
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=122 
+# 	 addr=2217
+# 	 data=2384979111
+# 	 wr_rd=1 
+# from bfm 1245 
+# 
+# 
+# valid tx detected 1245
+# valid tx detected 1245
+# -----------------printing  read agent---------------
+# 	 count=123 
+# 	 addr=2217
+# 	 data=58535
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=124 
+# 	 addr=2217
+# 	 data=58535
+# 	 wr_rd=0 
+# from bfm 1265 
+# 
+# 
+# valid tx detected 1265
+# valid tx detected 1265
+# -----------------printing write agent---------------
+# 	 count=125 
+# 	 addr=65428
+# 	 data=3005056429
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=126 
+# 	 addr=65428
+# 	 data=3005056429
+# 	 wr_rd=1 
+# from bfm 1285 
+# 
+# 
+# valid tx detected 1285
+# valid tx detected 1285
+# -----------------printing  read agent---------------
+# 	 count=127 
+# 	 addr=65428
+# 	 data=34221
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=128 
+# 	 addr=65428
+# 	 data=34221
+# 	 wr_rd=0 
+# from bfm 1305 
+# 
+# 
+# valid tx detected 1305
+# valid tx detected 1305
+# -----------------printing write agent---------------
+# 	 count=129 
+# 	 addr=29651
+# 	 data=3485835250
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=130 
+# 	 addr=29651
+# 	 data=3485835250
+# 	 wr_rd=1 
+# from bfm 1325 
+# 
+# 
+# valid tx detected 1325
+# valid tx detected 1325
+# -----------------printing  read agent---------------
+# 	 count=131 
+# 	 addr=29651
+# 	 data=40946
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=132 
+# 	 addr=29651
+# 	 data=40946
+# 	 wr_rd=0 
+# from bfm 1345 
+# 
+# 
+# valid tx detected 1345
+# valid tx detected 1345
+# -----------------printing write agent---------------
+# 	 count=133 
+# 	 addr=62623
+# 	 data=2820945749
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=134 
+# 	 addr=62623
+# 	 data=2820945749
+# 	 wr_rd=1 
+# from bfm 1365 
+# 
+# 
+# valid tx detected 1365
+# valid tx detected 1365
+# -----------------printing  read agent---------------
+# 	 count=135 
+# 	 addr=62623
+# 	 data=14165
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=136 
+# 	 addr=62623
+# 	 data=14165
+# 	 wr_rd=0 
+# from bfm 1385 
+# 
+# 
+# valid tx detected 1385
+# valid tx detected 1385
+# -----------------printing write agent---------------
+# 	 count=137 
+# 	 addr=26941
+# 	 data=1878748825
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=138 
+# 	 addr=26941
+# 	 data=1878748825
+# 	 wr_rd=1 
+# from bfm 1405 
+# 
+# 
+# valid tx detected 1405
+# valid tx detected 1405
+# -----------------printing  read agent---------------
+# 	 count=139 
+# 	 addr=26941
+# 	 data=28313
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=140 
+# 	 addr=26941
+# 	 data=28313
+# 	 wr_rd=0 
+# from bfm 1425 
+# 
+# 
+# valid tx detected 1425
+# valid tx detected 1425
+# -----------------printing write agent---------------
+# 	 count=141 
+# 	 addr=23695
+# 	 data=3656103004
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=142 
+# 	 addr=23695
+# 	 data=3656103004
+# 	 wr_rd=1 
+# from bfm 1445 
+# 
+# 
+# valid tx detected 1445
+# valid tx detected 1445
+# -----------------printing  read agent---------------
+# 	 count=143 
+# 	 addr=23695
+# 	 data=46172
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=144 
+# 	 addr=23695
+# 	 data=46172
+# 	 wr_rd=0 
+# from bfm 1465 
+# 
+# 
+# valid tx detected 1465
+# valid tx detected 1465
+# -----------------printing write agent---------------
+# 	 count=145 
+# 	 addr=64193
+# 	 data=321154909
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=146 
+# 	 addr=64193
+# 	 data=321154909
+# 	 wr_rd=1 
+# from bfm 1485 
+# 
+# 
+# valid tx detected 1485
+# valid tx detected 1485
+# -----------------printing  read agent---------------
+# 	 count=147 
+# 	 addr=64193
+# 	 data=28509
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=148 
+# 	 addr=64193
+# 	 data=28509
+# 	 wr_rd=0 
+# from bfm 1505 
+# 
+# 
+# valid tx detected 1505
+# valid tx detected 1505
+# -----------------printing write agent---------------
+# 	 count=149 
+# 	 addr=37760
+# 	 data=1942849415
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=150 
+# 	 addr=37760
+# 	 data=1942849415
+# 	 wr_rd=1 
+# from bfm 1525 
+# 
+# 
+# valid tx detected 1525
+# valid tx detected 1525
+# -----------------printing  read agent---------------
+# 	 count=151 
+# 	 addr=37760
+# 	 data=34695
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=152 
+# 	 addr=37760
+# 	 data=34695
+# 	 wr_rd=0 
+# from bfm 1545 
+# 
+# 
+# valid tx detected 1545
+# valid tx detected 1545
+# -----------------printing write agent---------------
+# 	 count=153 
+# 	 addr=27642
+# 	 data=377552324
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=154 
+# 	 addr=27642
+# 	 data=377552324
+# 	 wr_rd=1 
+# from bfm 1565 
+# 
+# 
+# valid tx detected 1565
+# valid tx detected 1565
+# -----------------printing  read agent---------------
+# 	 count=155 
+# 	 addr=27642
+# 	 data=64964
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=156 
+# 	 addr=27642
+# 	 data=64964
+# 	 wr_rd=0 
+# from bfm 1585 
+# 
+# 
+# valid tx detected 1585
+# valid tx detected 1585
+# -----------------printing write agent---------------
+# 	 count=157 
+# 	 addr=33940
+# 	 data=1896043725
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=158 
+# 	 addr=33940
+# 	 data=1896043725
+# 	 wr_rd=1 
+# from bfm 1605 
+# 
+# 
+# valid tx detected 1605
+# valid tx detected 1605
+# -----------------printing  read agent---------------
+# 	 count=159 
+# 	 addr=33940
+# 	 data=21709
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=160 
+# 	 addr=33940
+# 	 data=21709
+# 	 wr_rd=0 
+# from bfm 1625 
+# 
+# 
+# valid tx detected 1625
+# valid tx detected 1625
+# -----------------printing write agent---------------
+# 	 count=161 
+# 	 addr=58802
+# 	 data=1581457875
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=162 
+# 	 addr=58802
+# 	 data=1581457875
+# 	 wr_rd=1 
+# from bfm 1645 
+# 
+# 
+# valid tx detected 1645
+# valid tx detected 1645
+# -----------------printing  read agent---------------
+# 	 count=163 
+# 	 addr=58802
+# 	 data=8659
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=164 
+# 	 addr=58802
+# 	 data=8659
+# 	 wr_rd=0 
+# from bfm 1665 
+# 
+# 
+# valid tx detected 1665
+# valid tx detected 1665
+# -----------------printing write agent---------------
+# 	 count=165 
+# 	 addr=35150
+# 	 data=3970487743
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=166 
+# 	 addr=35150
+# 	 data=3970487743
+# 	 wr_rd=1 
+# from bfm 1685 
+# 
+# 
+# valid tx detected 1685
+# valid tx detected 1685
+# -----------------printing  read agent---------------
+# 	 count=167 
+# 	 addr=35150
+# 	 data=54719
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=168 
+# 	 addr=35150
+# 	 data=54719
+# 	 wr_rd=0 
+# from bfm 1705 
+# 
+# 
+# valid tx detected 1705
+# valid tx detected 1705
+# -----------------printing write agent---------------
+# 	 count=169 
+# 	 addr=13888
+# 	 data=2968666277
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=170 
+# 	 addr=13888
+# 	 data=2968666277
+# 	 wr_rd=1 
+# from bfm 1725 
+# 
+# 
+# valid tx detected 1725
+# valid tx detected 1725
+# -----------------printing  read agent---------------
+# 	 count=171 
+# 	 addr=13888
+# 	 data=16549
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=172 
+# 	 addr=13888
+# 	 data=16549
+# 	 wr_rd=0 
+# from bfm 1745 
+# 
+# 
+# valid tx detected 1745
+# valid tx detected 1745
+# -----------------printing write agent---------------
+# 	 count=173 
+# 	 addr=8305
+# 	 data=859551401
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=174 
+# 	 addr=8305
+# 	 data=859551401
+# 	 wr_rd=1 
+# from bfm 1765 
+# 
+# 
+# valid tx detected 1765
+# valid tx detected 1765
+# -----------------printing  read agent---------------
+# 	 count=175 
+# 	 addr=8305
+# 	 data=46761
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=176 
+# 	 addr=8305
+# 	 data=46761
+# 	 wr_rd=0 
+# from bfm 1785 
+# 
+# 
+# valid tx detected 1785
+# valid tx detected 1785
+# -----------------printing write agent---------------
+# 	 count=177 
+# 	 addr=12858
+# 	 data=771727465
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=178 
+# 	 addr=12858
+# 	 data=771727465
+# 	 wr_rd=1 
+# from bfm 1805 
+# 
+# 
+# valid tx detected 1805
+# valid tx detected 1805
+# -----------------printing  read agent---------------
+# 	 count=179 
+# 	 addr=12858
+# 	 data=41065
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=180 
+# 	 addr=12858
+# 	 data=41065
+# 	 wr_rd=0 
+# from bfm 1825 
+# 
+# 
+# valid tx detected 1825
+# valid tx detected 1825
+# -----------------printing write agent---------------
+# 	 count=181 
+# 	 addr=30145
+# 	 data=3591803460
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=182 
+# 	 addr=30145
+# 	 data=3591803460
+# 	 wr_rd=1 
+# from bfm 1845 
+# 
+# 
+# valid tx detected 1845
+# valid tx detected 1845
+# -----------------printing  read agent---------------
+# 	 count=183 
+# 	 addr=30145
+# 	 data=37444
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=184 
+# 	 addr=30145
+# 	 data=37444
+# 	 wr_rd=0 
+# from bfm 1865 
+# 
+# 
+# valid tx detected 1865
+# valid tx detected 1865
+# -----------------printing write agent---------------
+# 	 count=185 
+# 	 addr=26506
+# 	 data=1593444212
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=186 
+# 	 addr=26506
+# 	 data=1593444212
+# 	 wr_rd=1 
+# from bfm 1885 
+# 
+# 
+# valid tx detected 1885
+# valid tx detected 1885
+# -----------------printing  read agent---------------
+# 	 count=187 
+# 	 addr=26506
+# 	 data=1908
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=188 
+# 	 addr=26506
+# 	 data=1908
+# 	 wr_rd=0 
+# from bfm 1905 
+# 
+# 
+# valid tx detected 1905
+# valid tx detected 1905
+# -----------------printing write agent---------------
+# 	 count=189 
+# 	 addr=48737
+# 	 data=1318649296
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=190 
+# 	 addr=48737
+# 	 data=1318649296
+# 	 wr_rd=1 
+# from bfm 1925 
+# 
+# 
+# valid tx detected 1925
+# valid tx detected 1925
+# -----------------printing  read agent---------------
+# 	 count=191 
+# 	 addr=48737
+# 	 data=64976
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=192 
+# 	 addr=48737
+# 	 data=64976
+# 	 wr_rd=0 
+# from bfm 1945 
+# 
+# 
+# valid tx detected 1945
+# valid tx detected 1945
+# -----------------printing write agent---------------
+# 	 count=193 
+# 	 addr=36394
+# 	 data=785881784
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=194 
+# 	 addr=36394
+# 	 data=785881784
+# 	 wr_rd=1 
+# from bfm 1965 
+# 
+# 
+# valid tx detected 1965
+# valid tx detected 1965
+# -----------------printing  read agent---------------
+# 	 count=195 
+# 	 addr=36394
+# 	 data=39608
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=196 
+# 	 addr=36394
+# 	 data=39608
+# 	 wr_rd=0 
+# from bfm 1985 
+# 
+# 
+# valid tx detected 1985
+# valid tx detected 1985
+# -----------------printing write agent---------------
+# 	 count=197 
+# 	 addr=26260
+# 	 data=3484614667
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=198 
+# 	 addr=26260
+# 	 data=3484614667
+# 	 wr_rd=1 
+# from bfm 2005 
+# 
+# 
+# valid tx detected 2005
+# valid tx detected 2005
+# -----------------printing  read agent---------------
+# 	 count=199 
+# 	 addr=26260
+# 	 data=11
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=200 
+# 	 addr=26260
+# 	 data=11
+# 	 wr_rd=0 
+# from bfm 2025 
+# 
+# 
+# valid tx detected 2025
+# valid tx detected 2025
+# -----------------printing write agent---------------
+# 	 count=201 
+# 	 addr=30019
+# 	 data=251709376
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=202 
+# 	 addr=30019
+# 	 data=251709376
+# 	 wr_rd=1 
+# from bfm 2045 
+# 
+# 
+# valid tx detected 2045
+# valid tx detected 2045
+# -----------------printing  read agent---------------
+# 	 count=203 
+# 	 addr=30019
+# 	 data=51136
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=204 
+# 	 addr=30019
+# 	 data=51136
+# 	 wr_rd=0 
+# from bfm 2065 
+# 
+# 
+# valid tx detected 2065
+# valid tx detected 2065
+# -----------------printing write agent---------------
+# 	 count=205 
+# 	 addr=6298
+# 	 data=3755070161
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=206 
+# 	 addr=6298
+# 	 data=3755070161
+# 	 wr_rd=1 
+# from bfm 2085 
+# 
+# 
+# valid tx detected 2085
+# valid tx detected 2085
+# -----------------printing  read agent---------------
+# 	 count=207 
+# 	 addr=6298
+# 	 data=53969
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=208 
+# 	 addr=6298
+# 	 data=53969
+# 	 wr_rd=0 
+# from bfm 2105 
+# 
+# 
+# valid tx detected 2105
+# valid tx detected 2105
+# -----------------printing write agent---------------
+# 	 count=209 
+# 	 addr=57315
+# 	 data=1731768821
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=210 
+# 	 addr=57315
+# 	 data=1731768821
+# 	 wr_rd=1 
+# from bfm 2125 
+# 
+# 
+# valid tx detected 2125
+# valid tx detected 2125
+# -----------------printing  read agent---------------
+# 	 count=211 
+# 	 addr=57315
+# 	 data=45557
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=212 
+# 	 addr=57315
+# 	 data=45557
+# 	 wr_rd=0 
+# from bfm 2145 
+# 
+# 
+# valid tx detected 2145
+# valid tx detected 2145
+# -----------------printing write agent---------------
+# 	 count=213 
+# 	 addr=38364
+# 	 data=1653104697
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=214 
+# 	 addr=38364
+# 	 data=1653104697
+# 	 wr_rd=1 
+# from bfm 2165 
+# 
+# 
+# valid tx detected 2165
+# valid tx detected 2165
+# -----------------printing  read agent---------------
+# 	 count=215 
+# 	 addr=38364
+# 	 data=24633
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=216 
+# 	 addr=38364
+# 	 data=24633
+# 	 wr_rd=0 
+# from bfm 2185 
+# 
+# 
+# valid tx detected 2185
+# valid tx detected 2185
+# -----------------printing write agent---------------
+# 	 count=217 
+# 	 addr=23598
+# 	 data=3291977113
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=218 
+# 	 addr=23598
+# 	 data=3291977113
+# 	 wr_rd=1 
+# from bfm 2205 
+# 
+# 
+# valid tx detected 2205
+# valid tx detected 2205
+# -----------------printing  read agent---------------
+# 	 count=219 
+# 	 addr=23598
+# 	 data=38297
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=220 
+# 	 addr=23598
+# 	 data=38297
+# 	 wr_rd=0 
+# from bfm 2225 
+# 
+# 
+# valid tx detected 2225
+# valid tx detected 2225
+# -----------------printing write agent---------------
+# 	 count=221 
+# 	 addr=62337
+# 	 data=369437882
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=222 
+# 	 addr=62337
+# 	 data=369437882
+# 	 wr_rd=1 
+# from bfm 2245 
+# 
+# 
+# valid tx detected 2245
+# valid tx detected 2245
+# -----------------printing  read agent---------------
+# 	 count=223 
+# 	 addr=62337
+# 	 data=11450
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=224 
+# 	 addr=62337
+# 	 data=11450
+# 	 wr_rd=0 
+# from bfm 2265 
+# 
+# 
+# valid tx detected 2265
+# valid tx detected 2265
+# -----------------printing write agent---------------
+# 	 count=225 
+# 	 addr=39576
+# 	 data=3057273931
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=226 
+# 	 addr=39576
+# 	 data=3057273931
+# 	 wr_rd=1 
+# from bfm 2285 
+# 
+# 
+# valid tx detected 2285
+# valid tx detected 2285
+# -----------------printing  read agent---------------
+# 	 count=227 
+# 	 addr=39576
+# 	 data=19531
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=228 
+# 	 addr=39576
+# 	 data=19531
+# 	 wr_rd=0 
+# from bfm 2305 
+# 
+# 
+# valid tx detected 2305
+# valid tx detected 2305
+# -----------------printing write agent---------------
+# 	 count=229 
+# 	 addr=63801
+# 	 data=831883203
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=230 
+# 	 addr=63801
+# 	 data=831883203
+# 	 wr_rd=1 
+# from bfm 2325 
+# 
+# 
+# valid tx detected 2325
+# valid tx detected 2325
+# -----------------printing  read agent---------------
+# 	 count=231 
+# 	 addr=63801
+# 	 data=34755
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=232 
+# 	 addr=63801
+# 	 data=34755
+# 	 wr_rd=0 
+# from bfm 2345 
+# 
+# 
+# valid tx detected 2345
+# valid tx detected 2345
+# -----------------printing write agent---------------
+# 	 count=233 
+# 	 addr=2913
+# 	 data=909153150
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=234 
+# 	 addr=2913
+# 	 data=909153150
+# 	 wr_rd=1 
+# from bfm 2365 
+# 
+# 
+# valid tx detected 2365
+# valid tx detected 2365
+# -----------------printing  read agent---------------
+# 	 count=235 
+# 	 addr=2913
+# 	 data=37758
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=236 
+# 	 addr=2913
+# 	 data=37758
+# 	 wr_rd=0 
+# valid tx detected 2385
+# valid tx detected 2385
+# -----------------printing write agent---------------
+# 	 count=237 
+# 	 addr=59627
+# 	 data=2756253820
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=238 
+# 	 addr=59627
+# 	 data=2756253820
+# 	 wr_rd=1 
+# valid tx detected 2405
+# valid tx detected 2405
+# -----------------printing  read agent---------------
+# 	 count=239 
+# 	 addr=59627
+# 	 data=6268
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=240 
+# 	 addr=59627
+# 	 data=6268
+# 	 wr_rd=0 
+# ** Note: $finish    : top.sv(78)
+#    Time: 2425 ns  Iteration: 1  Instance: /top
+# 1
+# Break in Module top at top.sv line 78
+# End time: 22:15:20 on Nov 24,2024, Elapsed time: 0:00:08
+# Errors: 0, Warnings: 1
+# vsim -coverage n_wr_rd_test "+testname=n_wr_n_rd_test" "+num_tx=30" "+num_agents=2" -novopt -suppress 12110 
+# Start time: 22:15:20 on Nov 24,2024
+# ** Warning: (vsim-8891) -novopt option has no effect when used with the optimized design. -novopt option is now deprecated and will be removed in future releases.
+# Loading sv_std.std
+# Loading work.top_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.mem_intf(fast)
+# num_agents=2
+# num_tx=30
+# gen from agent[0]
+# bfm from agent[0]
+# mon from agent[0]
+# cov from agent[0]
+# gen from agent[1]
+# bfm from agent[1]
+# mon from agent[1]
+# cov from agent[1]
+# i=0
+# from bfm 15 
+# 
+# 
+# mon from agent[0]
+# executing monitor on memory
+# cov from agent[0]
+# executing coverage functionality at 15
+# i=1
+# from bfm 15 
+# 
+# 
+# mon from agent[1]
+# executing monitor on memory
+# cov from agent[1]
+# executing coverage functionality at 15
+# from bfm 25 
+# 
+# 
+# valid tx detected 25
+# valid tx detected 25
+# -----------------printing write agent---------------
+# 	 count=1 
+# 	 addr=12160
+# 	 data=927591996
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=2 
+# 	 addr=12160
+# 	 data=927591996
+# 	 wr_rd=1 
+# from bfm 45 
+# 
+# 
+# valid tx detected 45
+# valid tx detected 45
+# -----------------printing write agent---------------
+# 	 count=3 
+# 	 addr=28843
+# 	 data=2572274124
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=4 
+# 	 addr=28843
+# 	 data=2572274124
+# 	 wr_rd=1 
+# from bfm 65 
+# 
+# 
+# valid tx detected 65
+# valid tx detected 65
+# -----------------printing write agent---------------
+# 	 count=5 
+# 	 addr=17970
+# 	 data=2185589387
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=6 
+# 	 addr=17970
+# 	 data=2185589387
+# 	 wr_rd=1 
+# from bfm 85 
+# 
+# 
+# valid tx detected 85
+# valid tx detected 85
+# -----------------printing write agent---------------
+# 	 count=7 
+# 	 addr=8629
+# 	 data=1826442637
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=8 
+# 	 addr=8629
+# 	 data=1826442637
+# 	 wr_rd=1 
+# from bfm 105 
+# 
+# 
+# valid tx detected 105
+# valid tx detected 105
+# -----------------printing write agent---------------
+# 	 count=9 
+# 	 addr=3942
+# 	 data=2488302683
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=10 
+# 	 addr=3942
+# 	 data=2488302683
+# 	 wr_rd=1 
+# from bfm 125 
+# 
+# 
+# valid tx detected 125
+# valid tx detected 125
+# -----------------printing write agent---------------
+# 	 count=11 
+# 	 addr=65043
+# 	 data=411918922
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=12 
+# 	 addr=65043
+# 	 data=411918922
+# 	 wr_rd=1 
+# from bfm 145 
+# 
+# 
+# valid tx detected 145
+# valid tx detected 145
+# -----------------printing write agent---------------
+# 	 count=13 
+# 	 addr=58876
+# 	 data=2121816173
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=14 
+# 	 addr=58876
+# 	 data=2121816173
+# 	 wr_rd=1 
+# from bfm 165 
+# 
+# 
+# valid tx detected 165
+# valid tx detected 165
+# -----------------printing write agent---------------
+# 	 count=15 
+# 	 addr=21815
+# 	 data=961697504
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=16 
+# 	 addr=21815
+# 	 data=961697504
+# 	 wr_rd=1 
+# from bfm 185 
+# 
+# 
+# valid tx detected 185
+# valid tx detected 185
+# -----------------printing write agent---------------
+# 	 count=17 
+# 	 addr=44712
+# 	 data=973503241
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=18 
+# 	 addr=44712
+# 	 data=973503241
+# 	 wr_rd=1 
+# from bfm 205 
+# 
+# 
+# valid tx detected 205
+# valid tx detected 205
+# -----------------printing write agent---------------
+# 	 count=19 
+# 	 addr=50177
+# 	 data=453484432
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=20 
+# 	 addr=50177
+# 	 data=453484432
+# 	 wr_rd=1 
+# from bfm 225 
+# 
+# 
+# valid tx detected 225
+# valid tx detected 225
+# -----------------printing write agent---------------
+# 	 count=21 
+# 	 addr=7625
+# 	 data=945850584
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=22 
+# 	 addr=7625
+# 	 data=945850584
+# 	 wr_rd=1 
+# from bfm 245 
+# 
+# 
+# valid tx detected 245
+# valid tx detected 245
+# -----------------printing write agent---------------
+# 	 count=23 
+# 	 addr=39282
+# 	 data=1154716482
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=24 
+# 	 addr=39282
+# 	 data=1154716482
+# 	 wr_rd=1 
+# from bfm 265 
+# 
+# 
+# valid tx detected 265
+# valid tx detected 265
+# -----------------printing write agent---------------
+# 	 count=25 
+# 	 addr=2370
+# 	 data=1828986021
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=26 
+# 	 addr=2370
+# 	 data=1828986021
+# 	 wr_rd=1 
+# from bfm 285 
+# 
+# 
+# valid tx detected 285
+# valid tx detected 285
+# -----------------printing write agent---------------
+# 	 count=27 
+# 	 addr=15605
+# 	 data=2463278201
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=28 
+# 	 addr=15605
+# 	 data=2463278201
+# 	 wr_rd=1 
+# from bfm 305 
+# 
+# 
+# valid tx detected 305
+# valid tx detected 305
+# -----------------printing write agent---------------
+# 	 count=29 
+# 	 addr=50594
+# 	 data=2210164500
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=30 
+# 	 addr=50594
+# 	 data=2210164500
+# 	 wr_rd=1 
+# from bfm 325 
+# 
+# 
+# valid tx detected 325
+# valid tx detected 325
+# -----------------printing write agent---------------
+# 	 count=31 
+# 	 addr=19665
+# 	 data=4050134868
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=32 
+# 	 addr=19665
+# 	 data=4050134868
+# 	 wr_rd=1 
+# from bfm 345 
+# 
+# 
+# valid tx detected 345
+# valid tx detected 345
+# -----------------printing write agent---------------
+# 	 count=33 
+# 	 addr=41359
+# 	 data=1983934717
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=34 
+# 	 addr=41359
+# 	 data=1983934717
+# 	 wr_rd=1 
+# from bfm 365 
+# 
+# 
+# valid tx detected 365
+# valid tx detected 365
+# -----------------printing write agent---------------
+# 	 count=35 
+# 	 addr=63404
+# 	 data=916057574
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=36 
+# 	 addr=63404
+# 	 data=916057574
+# 	 wr_rd=1 
+# from bfm 385 
+# 
+# 
+# valid tx detected 385
+# valid tx detected 385
+# -----------------printing write agent---------------
+# 	 count=37 
+# 	 addr=20374
+# 	 data=2218458672
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=38 
+# 	 addr=20374
+# 	 data=2218458672
+# 	 wr_rd=1 
+# from bfm 405 
+# 
+# 
+# valid tx detected 405
+# valid tx detected 405
+# -----------------printing write agent---------------
+# 	 count=39 
+# 	 addr=36756
+# 	 data=616674534
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=40 
+# 	 addr=36756
+# 	 data=616674534
+# 	 wr_rd=1 
+# from bfm 425 
+# 
+# 
+# valid tx detected 425
+# valid tx detected 425
+# -----------------printing write agent---------------
+# 	 count=41 
+# 	 addr=35449
+# 	 data=2744787791
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=42 
+# 	 addr=35449
+# 	 data=2744787791
+# 	 wr_rd=1 
+# from bfm 445 
+# 
+# 
+# valid tx detected 445
+# valid tx detected 445
+# -----------------printing write agent---------------
+# 	 count=43 
+# 	 addr=60356
+# 	 data=2069343973
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=44 
+# 	 addr=60356
+# 	 data=2069343973
+# 	 wr_rd=1 
+# from bfm 465 
+# 
+# 
+# valid tx detected 465
+# valid tx detected 465
+# -----------------printing write agent---------------
+# 	 count=45 
+# 	 addr=434
+# 	 data=324852324
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=46 
+# 	 addr=434
+# 	 data=324852324
+# 	 wr_rd=1 
+# from bfm 485 
+# 
+# 
+# valid tx detected 485
+# valid tx detected 485
+# -----------------printing write agent---------------
+# 	 count=47 
+# 	 addr=19104
+# 	 data=2941140232
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=48 
+# 	 addr=19104
+# 	 data=2941140232
+# 	 wr_rd=1 
+# from bfm 505 
+# 
+# 
+# valid tx detected 505
+# valid tx detected 505
+# -----------------printing write agent---------------
+# 	 count=49 
+# 	 addr=5838
+# 	 data=820062601
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=50 
+# 	 addr=5838
+# 	 data=820062601
+# 	 wr_rd=1 
+# from bfm 525 
+# 
+# 
+# valid tx detected 525
+# valid tx detected 525
+# -----------------printing write agent---------------
+# 	 count=51 
+# 	 addr=59800
+# 	 data=503695511
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=52 
+# 	 addr=59800
+# 	 data=503695511
+# 	 wr_rd=1 
+# from bfm 545 
+# 
+# 
+# valid tx detected 545
+# valid tx detected 545
+# -----------------printing write agent---------------
+# 	 count=53 
+# 	 addr=25271
+# 	 data=2850992350
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=54 
+# 	 addr=25271
+# 	 data=2850992350
+# 	 wr_rd=1 
+# from bfm 565 
+# 
+# 
+# valid tx detected 565
+# valid tx detected 565
+# -----------------printing write agent---------------
+# 	 count=55 
+# 	 addr=46653
+# 	 data=1259681047
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=56 
+# 	 addr=46653
+# 	 data=1259681047
+# 	 wr_rd=1 
+# from bfm 585 
+# 
+# 
+# valid tx detected 585
+# valid tx detected 585
+# -----------------printing write agent---------------
+# 	 count=57 
+# 	 addr=28569
+# 	 data=2571453225
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=58 
+# 	 addr=28569
+# 	 data=2571453225
+# 	 wr_rd=1 
+# from bfm 605 
+# 
+# 
+# valid tx detected 605
+# valid tx detected 605
+# -----------------printing write agent---------------
+# 	 count=59 
+# 	 addr=26723
+# 	 data=2825081610
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=60 
+# 	 addr=26723
+# 	 data=2825081610
+# 	 wr_rd=1 
+# from bfm 625 
+# 
+# 
+# valid tx detected 625
+# valid tx detected 625
+# -----------------printing  read agent---------------
+# 	 count=61 
+# 	 addr=12160
+# 	 data=60988
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=62 
+# 	 addr=12160
+# 	 data=60988
+# 	 wr_rd=0 
+# from bfm 645 
+# 
+# 
+# valid tx detected 645
+# valid tx detected 645
+# -----------------printing  read agent---------------
+# 	 count=63 
+# 	 addr=28843
+# 	 data=51660
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=64 
+# 	 addr=28843
+# 	 data=51660
+# 	 wr_rd=0 
+# from bfm 665 
+# 
+# 
+# valid tx detected 665
+# valid tx detected 665
+# -----------------printing  read agent---------------
+# 	 count=65 
+# 	 addr=17970
+# 	 data=29323
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=66 
+# 	 addr=17970
+# 	 data=29323
+# 	 wr_rd=0 
+# from bfm 685 
+# 
+# 
+# valid tx detected 685
+# valid tx detected 685
+# -----------------printing  read agent---------------
+# 	 count=67 
+# 	 addr=8629
+# 	 data=19853
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=68 
+# 	 addr=8629
+# 	 data=19853
+# 	 wr_rd=0 
+# from bfm 705 
+# 
+# 
+# valid tx detected 705
+# valid tx detected 705
+# -----------------printing  read agent---------------
+# 	 count=69 
+# 	 addr=3942
+# 	 data=31835
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=70 
+# 	 addr=3942
+# 	 data=31835
+# 	 wr_rd=0 
+# from bfm 725 
+# 
+# 
+# valid tx detected 725
+# valid tx detected 725
+# -----------------printing  read agent---------------
+# 	 count=71 
+# 	 addr=65043
+# 	 data=25162
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=72 
+# 	 addr=65043
+# 	 data=25162
+# 	 wr_rd=0 
+# from bfm 745 
+# 
+# 
+# valid tx detected 745
+# valid tx detected 745
+# -----------------printing  read agent---------------
+# 	 count=73 
+# 	 addr=58876
+# 	 data=22637
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=74 
+# 	 addr=58876
+# 	 data=22637
+# 	 wr_rd=0 
+# from bfm 765 
+# 
+# 
+# valid tx detected 765
+# valid tx detected 765
+# -----------------printing  read agent---------------
+# 	 count=75 
+# 	 addr=21815
+# 	 data=22240
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=76 
+# 	 addr=21815
+# 	 data=22240
+# 	 wr_rd=0 
+# from bfm 785 
+# 
+# 
+# valid tx detected 785
+# valid tx detected 785
+# -----------------printing  read agent---------------
+# 	 count=77 
+# 	 addr=44712
+# 	 data=31497
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=78 
+# 	 addr=44712
+# 	 data=31497
+# 	 wr_rd=0 
+# from bfm 805 
+# 
+# 
+# valid tx detected 805
+# valid tx detected 805
+# -----------------printing  read agent---------------
+# 	 count=79 
+# 	 addr=50177
+# 	 data=40848
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=80 
+# 	 addr=50177
+# 	 data=40848
+# 	 wr_rd=0 
+# from bfm 825 
+# 
+# 
+# valid tx detected 825
+# valid tx detected 825
+# -----------------printing  read agent---------------
+# 	 count=81 
+# 	 addr=7625
+# 	 data=35032
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=82 
+# 	 addr=7625
+# 	 data=35032
+# 	 wr_rd=0 
+# from bfm 845 
+# 
+# 
+# valid tx detected 845
+# valid tx detected 845
+# -----------------printing  read agent---------------
+# 	 count=83 
+# 	 addr=39282
+# 	 data=37698
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=84 
+# 	 addr=39282
+# 	 data=37698
+# 	 wr_rd=0 
+# from bfm 865 
+# 
+# 
+# valid tx detected 865
+# valid tx detected 865
+# -----------------printing  read agent---------------
+# 	 count=85 
+# 	 addr=2370
+# 	 data=7333
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=86 
+# 	 addr=2370
+# 	 data=7333
+# 	 wr_rd=0 
+# from bfm 885 
+# 
+# 
+# valid tx detected 885
+# valid tx detected 885
+# -----------------printing  read agent---------------
+# 	 count=87 
+# 	 addr=15605
+# 	 data=42105
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=88 
+# 	 addr=15605
+# 	 data=42105
+# 	 wr_rd=0 
+# from bfm 905 
+# 
+# 
+# valid tx detected 905
+# valid tx detected 905
+# -----------------printing  read agent---------------
+# 	 count=89 
+# 	 addr=50594
+# 	 data=28436
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=90 
+# 	 addr=50594
+# 	 data=28436
+# 	 wr_rd=0 
+# from bfm 925 
+# 
+# 
+# valid tx detected 925
+# valid tx detected 925
+# -----------------printing  read agent---------------
+# 	 count=91 
+# 	 addr=19665
+# 	 data=10068
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=92 
+# 	 addr=19665
+# 	 data=10068
+# 	 wr_rd=0 
+# from bfm 945 
+# 
+# 
+# valid tx detected 945
+# valid tx detected 945
+# -----------------printing  read agent---------------
+# 	 count=93 
+# 	 addr=41359
+# 	 data=28925
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=94 
+# 	 addr=41359
+# 	 data=28925
+# 	 wr_rd=0 
+# from bfm 965 
+# 
+# 
+# valid tx detected 965
+# valid tx detected 965
+# -----------------printing  read agent---------------
+# 	 count=95 
+# 	 addr=63404
+# 	 data=60902
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=96 
+# 	 addr=63404
+# 	 data=60902
+# 	 wr_rd=0 
+# from bfm 985 
+# 
+# 
+# valid tx detected 985
+# valid tx detected 985
+# -----------------printing  read agent---------------
+# 	 count=97 
+# 	 addr=20374
+# 	 data=65072
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=98 
+# 	 addr=20374
+# 	 data=65072
+# 	 wr_rd=0 
+# from bfm 1005 
+# 
+# 
+# valid tx detected 1005
+# valid tx detected 1005
+# -----------------printing  read agent---------------
+# 	 count=99 
+# 	 addr=36756
+# 	 data=46310
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=100 
+# 	 addr=36756
+# 	 data=46310
+# 	 wr_rd=0 
+# from bfm 1025 
+# 
+# 
+# valid tx detected 1025
+# valid tx detected 1025
+# -----------------printing  read agent---------------
+# 	 count=101 
+# 	 addr=35449
+# 	 data=9039
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=102 
+# 	 addr=35449
+# 	 data=9039
+# 	 wr_rd=0 
+# from bfm 1045 
+# 
+# 
+# valid tx detected 1045
+# valid tx detected 1045
+# -----------------printing  read agent---------------
+# 	 count=103 
+# 	 addr=60356
+# 	 data=44773
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=104 
+# 	 addr=60356
+# 	 data=44773
+# 	 wr_rd=0 
+# from bfm 1065 
+# 
+# 
+# valid tx detected 1065
+# valid tx detected 1065
+# -----------------printing  read agent---------------
+# 	 count=105 
+# 	 addr=434
+# 	 data=55908
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=106 
+# 	 addr=434
+# 	 data=55908
+# 	 wr_rd=0 
+# from bfm 1085 
+# 
+# 
+# valid tx detected 1085
+# valid tx detected 1085
+# -----------------printing  read agent---------------
+# 	 count=107 
+# 	 addr=19104
+# 	 data=15624
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=108 
+# 	 addr=19104
+# 	 data=15624
+# 	 wr_rd=0 
+# from bfm 1105 
+# 
+# 
+# valid tx detected 1105
+# valid tx detected 1105
+# -----------------printing  read agent---------------
+# 	 count=109 
+# 	 addr=5838
+# 	 data=10633
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=110 
+# 	 addr=5838
+# 	 data=10633
+# 	 wr_rd=0 
+# from bfm 1125 
+# 
+# 
+# valid tx detected 1125
+# valid tx detected 1125
+# -----------------printing  read agent---------------
+# 	 count=111 
+# 	 addr=59800
+# 	 data=51351
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=112 
+# 	 addr=59800
+# 	 data=51351
+# 	 wr_rd=0 
+# from bfm 1145 
+# 
+# 
+# valid tx detected 1145
+# valid tx detected 1145
+# -----------------printing  read agent---------------
+# 	 count=113 
+# 	 addr=25271
+# 	 data=45278
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=114 
+# 	 addr=25271
+# 	 data=45278
+# 	 wr_rd=0 
+# from bfm 1165 
+# 
+# 
+# valid tx detected 1165
+# valid tx detected 1165
+# -----------------printing  read agent---------------
+# 	 count=115 
+# 	 addr=46653
+# 	 data=13591
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=116 
+# 	 addr=46653
+# 	 data=13591
+# 	 wr_rd=0 
+# from bfm 1185 
+# 
+# 
+# valid tx detected 1185
+# valid tx detected 1185
+# -----------------printing  read agent---------------
+# 	 count=117 
+# 	 addr=28569
+# 	 data=17193
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=118 
+# 	 addr=28569
+# 	 data=17193
+# 	 wr_rd=0 
+# from bfm 1205 
+# 
+# 
+# valid tx detected 1205
+# valid tx detected 1205
+# -----------------printing  read agent---------------
+# 	 count=119 
+# 	 addr=26723
+# 	 data=21258
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=120 
+# 	 addr=26723
+# 	 data=21258
+# 	 wr_rd=0 
+# from bfm 1225 
+# 
+# 
+# valid tx detected 1225
+# valid tx detected 1225
+# -----------------printing write agent---------------
+# 	 count=121 
+# 	 addr=2217
+# 	 data=2384979111
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=122 
+# 	 addr=2217
+# 	 data=2384979111
+# 	 wr_rd=1 
+# from bfm 1245 
+# 
+# 
+# valid tx detected 1245
+# valid tx detected 1245
+# -----------------printing write agent---------------
+# 	 count=123 
+# 	 addr=14369
+# 	 data=1380068136
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=124 
+# 	 addr=14369
+# 	 data=1380068136
+# 	 wr_rd=1 
+# from bfm 1265 
+# 
+# 
+# valid tx detected 1265
+# valid tx detected 1265
+# -----------------printing write agent---------------
+# 	 count=125 
+# 	 addr=41177
+# 	 data=743071754
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=126 
+# 	 addr=41177
+# 	 data=743071754
+# 	 wr_rd=1 
+# from bfm 1285 
+# 
+# 
+# valid tx detected 1285
+# valid tx detected 1285
+# -----------------printing write agent---------------
+# 	 count=127 
+# 	 addr=29651
+# 	 data=3485835250
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=128 
+# 	 addr=29651
+# 	 data=3485835250
+# 	 wr_rd=1 
+# from bfm 1305 
+# 
+# 
+# valid tx detected 1305
+# valid tx detected 1305
+# -----------------printing write agent---------------
+# 	 count=129 
+# 	 addr=19325
+# 	 data=2600933203
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=130 
+# 	 addr=19325
+# 	 data=2600933203
+# 	 wr_rd=1 
+# from bfm 1325 
+# 
+# 
+# valid tx detected 1325
+# valid tx detected 1325
+# -----------------printing write agent---------------
+# 	 count=131 
+# 	 addr=57685
+# 	 data=2647776894
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=132 
+# 	 addr=57685
+# 	 data=2647776894
+# 	 wr_rd=1 
+# from bfm 1345 
+# 
+# 
+# valid tx detected 1345
+# valid tx detected 1345
+# -----------------printing write agent---------------
+# 	 count=133 
+# 	 addr=26941
+# 	 data=1878748825
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=134 
+# 	 addr=26941
+# 	 data=1878748825
+# 	 wr_rd=1 
+# from bfm 1365 
+# 
+# 
+# valid tx detected 1365
+# valid tx detected 1365
+# -----------------printing write agent---------------
+# 	 count=135 
+# 	 addr=50913
+# 	 data=729138486
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=136 
+# 	 addr=50913
+# 	 data=729138486
+# 	 wr_rd=1 
+# from bfm 1385 
+# 
+# 
+# valid tx detected 1385
+# valid tx detected 1385
+# -----------------printing write agent---------------
+# 	 count=137 
+# 	 addr=1860
+# 	 data=3737268746
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=138 
+# 	 addr=1860
+# 	 data=3737268746
+# 	 wr_rd=1 
+# from bfm 1405 
+# 
+# 
+# valid tx detected 1405
+# valid tx detected 1405
+# -----------------printing write agent---------------
+# 	 count=139 
+# 	 addr=64193
+# 	 data=321154909
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=140 
+# 	 addr=64193
+# 	 data=321154909
+# 	 wr_rd=1 
+# from bfm 1425 
+# 
+# 
+# valid tx detected 1425
+# valid tx detected 1425
+# -----------------printing write agent---------------
+# 	 count=141 
+# 	 addr=52971
+# 	 data=4014897218
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=142 
+# 	 addr=52971
+# 	 data=4014897218
+# 	 wr_rd=1 
+# from bfm 1445 
+# 
+# 
+# valid tx detected 1445
+# valid tx detected 1445
+# -----------------printing write agent---------------
+# 	 count=143 
+# 	 addr=23823
+# 	 data=1770639406
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=144 
+# 	 addr=23823
+# 	 data=1770639406
+# 	 wr_rd=1 
+# from bfm 1465 
+# 
+# 
+# valid tx detected 1465
+# valid tx detected 1465
+# -----------------printing write agent---------------
+# 	 count=145 
+# 	 addr=27642
+# 	 data=377552324
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=146 
+# 	 addr=27642
+# 	 data=377552324
+# 	 wr_rd=1 
+# from bfm 1485 
+# 
+# 
+# valid tx detected 1485
+# valid tx detected 1485
+# -----------------printing write agent---------------
+# 	 count=147 
+# 	 addr=58834
+# 	 data=9642276
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=148 
+# 	 addr=58834
+# 	 data=9642276
+# 	 wr_rd=1 
+# from bfm 1505 
+# 
+# 
+# valid tx detected 1505
+# valid tx detected 1505
+# -----------------printing write agent---------------
+# 	 count=149 
+# 	 addr=36010
+# 	 data=942192536
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=150 
+# 	 addr=36010
+# 	 data=942192536
+# 	 wr_rd=1 
+# from bfm 1525 
+# 
+# 
+# valid tx detected 1525
+# valid tx detected 1525
+# -----------------printing write agent---------------
+# 	 count=151 
+# 	 addr=58802
+# 	 data=1581457875
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=152 
+# 	 addr=58802
+# 	 data=1581457875
+# 	 wr_rd=1 
+# from bfm 1545 
+# 
+# 
+# valid tx detected 1545
+# valid tx detected 1545
+# -----------------printing write agent---------------
+# 	 count=153 
+# 	 addr=54877
+# 	 data=1221460522
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=154 
+# 	 addr=54877
+# 	 data=1221460522
+# 	 wr_rd=1 
+# from bfm 1565 
+# 
+# 
+# valid tx detected 1565
+# valid tx detected 1565
+# -----------------printing write agent---------------
+# 	 count=155 
+# 	 addr=62326
+# 	 data=2288800605
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=156 
+# 	 addr=62326
+# 	 data=2288800605
+# 	 wr_rd=1 
+# from bfm 1585 
+# 
+# 
+# valid tx detected 1585
+# valid tx detected 1585
+# -----------------printing write agent---------------
+# 	 count=157 
+# 	 addr=13888
+# 	 data=2968666277
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=158 
+# 	 addr=13888
+# 	 data=2968666277
+# 	 wr_rd=1 
+# from bfm 1605 
+# 
+# 
+# valid tx detected 1605
+# valid tx detected 1605
+# -----------------printing write agent---------------
+# 	 count=159 
+# 	 addr=45224
+# 	 data=2631693324
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=160 
+# 	 addr=45224
+# 	 data=2631693324
+# 	 wr_rd=1 
+# from bfm 1625 
+# 
+# 
+# valid tx detected 1625
+# valid tx detected 1625
+# -----------------printing write agent---------------
+# 	 count=161 
+# 	 addr=42306
+# 	 data=415434300
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=162 
+# 	 addr=42306
+# 	 data=415434300
+# 	 wr_rd=1 
+# from bfm 1645 
+# 
+# 
+# valid tx detected 1645
+# valid tx detected 1645
+# -----------------printing write agent---------------
+# 	 count=163 
+# 	 addr=12858
+# 	 data=771727465
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=164 
+# 	 addr=12858
+# 	 data=771727465
+# 	 wr_rd=1 
+# from bfm 1665 
+# 
+# 
+# valid tx detected 1665
+# valid tx detected 1665
+# -----------------printing write agent---------------
+# 	 count=165 
+# 	 addr=18278
+# 	 data=1830754713
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=166 
+# 	 addr=18278
+# 	 data=1830754713
+# 	 wr_rd=1 
+# from bfm 1685 
+# 
+# 
+# valid tx detected 1685
+# valid tx detected 1685
+# -----------------printing write agent---------------
+# 	 count=167 
+# 	 addr=60061
+# 	 data=239464405
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=168 
+# 	 addr=60061
+# 	 data=239464405
+# 	 wr_rd=1 
+# from bfm 1705 
+# 
+# 
+# valid tx detected 1705
+# valid tx detected 1705
+# -----------------printing write agent---------------
+# 	 count=169 
+# 	 addr=26506
+# 	 data=1593444212
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=170 
+# 	 addr=26506
+# 	 data=1593444212
+# 	 wr_rd=1 
+# from bfm 1725 
+# 
+# 
+# valid tx detected 1725
+# valid tx detected 1725
+# -----------------printing write agent---------------
+# 	 count=171 
+# 	 addr=43758
+# 	 data=465330267
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=172 
+# 	 addr=43758
+# 	 data=465330267
+# 	 wr_rd=1 
+# from bfm 1745 
+# 
+# 
+# valid tx detected 1745
+# valid tx detected 1745
+# -----------------printing write agent---------------
+# 	 count=173 
+# 	 addr=60915
+# 	 data=2112042372
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=174 
+# 	 addr=60915
+# 	 data=2112042372
+# 	 wr_rd=1 
+# from bfm 1765 
+# 
+# 
+# valid tx detected 1765
+# valid tx detected 1765
+# -----------------printing write agent---------------
+# 	 count=175 
+# 	 addr=36394
+# 	 data=785881784
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=176 
+# 	 addr=36394
+# 	 data=785881784
+# 	 wr_rd=1 
+# from bfm 1785 
+# 
+# 
+# valid tx detected 1785
+# valid tx detected 1785
+# -----------------printing write agent---------------
+# 	 count=177 
+# 	 addr=22782
+# 	 data=691377985
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=178 
+# 	 addr=22782
+# 	 data=691377985
+# 	 wr_rd=1 
+# from bfm 1805 
+# 
+# 
+# valid tx detected 1805
+# valid tx detected 1805
+# -----------------printing write agent---------------
+# 	 count=179 
+# 	 addr=44852
+# 	 data=1505901658
+# 	 wr_rd=1 
+# -----------------printing write agent---------------
+# 	 count=180 
+# 	 addr=44852
+# 	 data=1505901658
+# 	 wr_rd=1 
+# from bfm 1825 
+# 
+# 
+# valid tx detected 1825
+# valid tx detected 1825
+# -----------------printing  read agent---------------
+# 	 count=181 
+# 	 addr=2217
+# 	 data=58535
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=182 
+# 	 addr=2217
+# 	 data=58535
+# 	 wr_rd=0 
+# from bfm 1845 
+# 
+# 
+# valid tx detected 1845
+# valid tx detected 1845
+# -----------------printing  read agent---------------
+# 	 count=183 
+# 	 addr=14369
+# 	 data=11048
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=184 
+# 	 addr=14369
+# 	 data=11048
+# 	 wr_rd=0 
+# from bfm 1865 
+# 
+# 
+# valid tx detected 1865
+# valid tx detected 1865
+# -----------------printing  read agent---------------
+# 	 count=185 
+# 	 addr=41177
+# 	 data=24586
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=186 
+# 	 addr=41177
+# 	 data=24586
+# 	 wr_rd=0 
+# from bfm 1885 
+# 
+# 
+# valid tx detected 1885
+# valid tx detected 1885
+# -----------------printing  read agent---------------
+# 	 count=187 
+# 	 addr=29651
+# 	 data=40946
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=188 
+# 	 addr=29651
+# 	 data=40946
+# 	 wr_rd=0 
+# from bfm 1905 
+# 
+# 
+# valid tx detected 1905
+# valid tx detected 1905
+# -----------------printing  read agent---------------
+# 	 count=189 
+# 	 addr=19325
+# 	 data=5971
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=190 
+# 	 addr=19325
+# 	 data=5971
+# 	 wr_rd=0 
+# from bfm 1925 
+# 
+# 
+# valid tx detected 1925
+# valid tx detected 1925
+# -----------------printing  read agent---------------
+# 	 count=191 
+# 	 addr=57685
+# 	 data=56958
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=192 
+# 	 addr=57685
+# 	 data=56958
+# 	 wr_rd=0 
+# from bfm 1945 
+# 
+# 
+# valid tx detected 1945
+# valid tx detected 1945
+# -----------------printing  read agent---------------
+# 	 count=193 
+# 	 addr=26941
+# 	 data=28313
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=194 
+# 	 addr=26941
+# 	 data=28313
+# 	 wr_rd=0 
+# from bfm 1965 
+# 
+# 
+# valid tx detected 1965
+# valid tx detected 1965
+# -----------------printing  read agent---------------
+# 	 count=195 
+# 	 addr=50913
+# 	 data=50486
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=196 
+# 	 addr=50913
+# 	 data=50486
+# 	 wr_rd=0 
+# from bfm 1985 
+# 
+# 
+# valid tx detected 1985
+# valid tx detected 1985
+# -----------------printing  read agent---------------
+# 	 count=197 
+# 	 addr=1860
+# 	 data=12810
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=198 
+# 	 addr=1860
+# 	 data=12810
+# 	 wr_rd=0 
+# from bfm 2005 
+# 
+# 
+# valid tx detected 2005
+# valid tx detected 2005
+# -----------------printing  read agent---------------
+# 	 count=199 
+# 	 addr=64193
+# 	 data=28509
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=200 
+# 	 addr=64193
+# 	 data=28509
+# 	 wr_rd=0 
+# from bfm 2025 
+# 
+# 
+# valid tx detected 2025
+# valid tx detected 2025
+# -----------------printing  read agent---------------
+# 	 count=201 
+# 	 addr=52971
+# 	 data=30786
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=202 
+# 	 addr=52971
+# 	 data=30786
+# 	 wr_rd=0 
+# from bfm 2045 
+# 
+# 
+# valid tx detected 2045
+# valid tx detected 2045
+# -----------------printing  read agent---------------
+# 	 count=203 
+# 	 addr=23823
+# 	 data=53294
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=204 
+# 	 addr=23823
+# 	 data=53294
+# 	 wr_rd=0 
+# from bfm 2065 
+# 
+# 
+# valid tx detected 2065
+# valid tx detected 2065
+# -----------------printing  read agent---------------
+# 	 count=205 
+# 	 addr=27642
+# 	 data=64964
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=206 
+# 	 addr=27642
+# 	 data=64964
+# 	 wr_rd=0 
+# from bfm 2085 
+# 
+# 
+# valid tx detected 2085
+# valid tx detected 2085
+# -----------------printing  read agent---------------
+# 	 count=207 
+# 	 addr=58834
+# 	 data=8484
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=208 
+# 	 addr=58834
+# 	 data=8484
+# 	 wr_rd=0 
+# from bfm 2105 
+# 
+# 
+# valid tx detected 2105
+# valid tx detected 2105
+# -----------------printing  read agent---------------
+# 	 count=209 
+# 	 addr=36010
+# 	 data=47000
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=210 
+# 	 addr=36010
+# 	 data=47000
+# 	 wr_rd=0 
+# from bfm 2125 
+# 
+# 
+# valid tx detected 2125
+# valid tx detected 2125
+# -----------------printing  read agent---------------
+# 	 count=211 
+# 	 addr=58802
+# 	 data=8659
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=212 
+# 	 addr=58802
+# 	 data=8659
+# 	 wr_rd=0 
+# from bfm 2145 
+# 
+# 
+# valid tx detected 2145
+# valid tx detected 2145
+# -----------------printing  read agent---------------
+# 	 count=213 
+# 	 addr=54877
+# 	 data=554
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=214 
+# 	 addr=54877
+# 	 data=554
+# 	 wr_rd=0 
+# from bfm 2165 
+# 
+# 
+# valid tx detected 2165
+# valid tx detected 2165
+# -----------------printing  read agent---------------
+# 	 count=215 
+# 	 addr=62326
+# 	 data=21341
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=216 
+# 	 addr=62326
+# 	 data=21341
+# 	 wr_rd=0 
+# from bfm 2185 
+# 
+# 
+# valid tx detected 2185
+# valid tx detected 2185
+# -----------------printing  read agent---------------
+# 	 count=217 
+# 	 addr=13888
+# 	 data=16549
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=218 
+# 	 addr=13888
+# 	 data=16549
+# 	 wr_rd=0 
+# from bfm 2205 
+# 
+# 
+# valid tx detected 2205
+# valid tx detected 2205
+# -----------------printing  read agent---------------
+# 	 count=219 
+# 	 addr=45224
+# 	 data=29708
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=220 
+# 	 addr=45224
+# 	 data=29708
+# 	 wr_rd=0 
+# from bfm 2225 
+# 
+# 
+# valid tx detected 2225
+# valid tx detected 2225
+# -----------------printing  read agent---------------
+# 	 count=221 
+# 	 addr=42306
+# 	 data=1596
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=222 
+# 	 addr=42306
+# 	 data=1596
+# 	 wr_rd=0 
+# from bfm 2245 
+# 
+# 
+# valid tx detected 2245
+# valid tx detected 2245
+# -----------------printing  read agent---------------
+# 	 count=223 
+# 	 addr=12858
+# 	 data=41065
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=224 
+# 	 addr=12858
+# 	 data=41065
+# 	 wr_rd=0 
+# from bfm 2265 
+# 
+# 
+# valid tx detected 2265
+# valid tx detected 2265
+# -----------------printing  read agent---------------
+# 	 count=225 
+# 	 addr=18278
+# 	 data=6553
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=226 
+# 	 addr=18278
+# 	 data=6553
+# 	 wr_rd=0 
+# from bfm 2285 
+# 
+# 
+# valid tx detected 2285
+# valid tx detected 2285
+# -----------------printing  read agent---------------
+# 	 count=227 
+# 	 addr=60061
+# 	 data=61397
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=228 
+# 	 addr=60061
+# 	 data=61397
+# 	 wr_rd=0 
+# from bfm 2305 
+# 
+# 
+# valid tx detected 2305
+# valid tx detected 2305
+# -----------------printing  read agent---------------
+# 	 count=229 
+# 	 addr=26506
+# 	 data=1908
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=230 
+# 	 addr=26506
+# 	 data=1908
+# 	 wr_rd=0 
+# from bfm 2325 
+# 
+# 
+# valid tx detected 2325
+# valid tx detected 2325
+# -----------------printing  read agent---------------
+# 	 count=231 
+# 	 addr=43758
+# 	 data=24667
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=232 
+# 	 addr=43758
+# 	 data=24667
+# 	 wr_rd=0 
+# from bfm 2345 
+# 
+# 
+# valid tx detected 2345
+# valid tx detected 2345
+# -----------------printing  read agent---------------
+# 	 count=233 
+# 	 addr=60915
+# 	 data=13700
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=234 
+# 	 addr=60915
+# 	 data=13700
+# 	 wr_rd=0 
+# from bfm 2365 
+# 
+# 
+# valid tx detected 2365
+# valid tx detected 2365
+# -----------------printing  read agent---------------
+# 	 count=235 
+# 	 addr=36394
+# 	 data=39608
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=236 
+# 	 addr=36394
+# 	 data=39608
+# 	 wr_rd=0 
+# valid tx detected 2385
+# valid tx detected 2385
+# -----------------printing  read agent---------------
+# 	 count=237 
+# 	 addr=22782
+# 	 data=38721
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=238 
+# 	 addr=22782
+# 	 data=38721
+# 	 wr_rd=0 
+# valid tx detected 2405
+# valid tx detected 2405
+# -----------------printing  read agent---------------
+# 	 count=239 
+# 	 addr=44852
+# 	 data=15450
+# 	 wr_rd=0 
+# -----------------printing  read agent---------------
+# 	 count=240 
+# 	 addr=44852
+# 	 data=15450
+# 	 wr_rd=0 
+# ** Note: $finish    : top.sv(78)
+#    Time: 2425 ns  Iteration: 1  Instance: /top
+# 1
+# Break in Module top at top.sv line 78
