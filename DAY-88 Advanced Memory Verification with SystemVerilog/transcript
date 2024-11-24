@@ -31741,3 +31741,5 @@ do run_regr.do
 #    Time: 2425 ns  Iteration: 1  Instance: /top
 # 1
 # Break in Module top at top.sv line 78
+# End time: 22:20:13 on Nov 24,2024, Elapsed time: 0:04:53
+# Errors: 0, Warnings: 1
