@@ -94,3 +94,5 @@ Day-083 : PROBLEM STATEMENT-3.<br>
 Day-084 : PROBLEM STATEMENT-4.<br>
 Day-085 : PROBLEM STATEMENT-5.<br>
 Day-086 : INTERRUPT CONTROLLER.<br>
+Day-087 : SPI controller.<br>
+Day-088 : Advanced Memory Verification with SystemVerilog.<br>
