@@ -1,0 +1,13 @@
+var g_data = {'dummy':null,
+'11':'common.sv',
+'9':'mem_agent.sv',
+'3':'mem_ass.sv',
+'7':'mem_bfm.sv',
+'6':'mem_cov.sv',
+'10':'mem_env.sv',
+'8':'mem_gen.sv',
+'12':'mem_intf.sv',
+'5':'mem_mon.sv',
+'4':'mem_tx.sv',
+'2':'memory.sv',
+'1':'top.sv'};

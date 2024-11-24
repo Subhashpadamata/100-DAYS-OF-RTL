@@ -1,0 +1,45 @@
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>Questa Coverage Report</title>
+  <link rel="StyleSheet" media="screen" href="../css/hdl2html.css"/>
+</head>
+<body id="hdl2html">
+  <tt>
+<pre>
+<a name="1"><q-n>     1  </q-n></a><q-w>class</q-w> mem_mon;
+<a name="2"><q-n>     2  </q-n></a>	<q-w>int</q-w> num;
+<a name="3"><q-n>     3  </q-n></a>	mem_tx tx;
+<a name="4"><q-n>     4  </q-n></a>	<q-w>virtual</q-w> mem_intf vif;
+<a name="5"><q-n>     5  </q-n></a>
+<a name="6"><q-n>     6  </q-n></a>	<q-w>function</q-w> <q-w>new</q-w>(<q-w>int</q-w> num);
+<a name="7"><q-n>     7  </q-n></a>		<q-w>this</q-w>.num=num;
+<a name="8"><q-n>     8  </q-n></a>		vif=top.pif;
+<a name="9"><q-n>     9  </q-n></a>		$display(<q-l>"mon from agent[%0d]"</q-l>,num);
+<a name="10"><q-n>     10  </q-n></a>	<q-w>endfunction</q-w>
+<a name="11"><q-n>     11  </q-n></a>
+<a name="12"><q-n>     12  </q-n></a>	<q-w>task</q-w> run();
+<a name="13"><q-n>     13  </q-n></a>		$display(<q-l>"mon from agent[%0d]"</q-l>,num);
+<a name="14"><q-n>     14  </q-n></a>		$display(<q-l>"executing monitor on memory"</q-l>);
+<a name="15"><q-n>     15  </q-n></a>		<q-w>forever</q-w> <q-w>begin</q-w>
+<a name="16"><q-n>     16  </q-n></a>			@( vif.mon_cb);
+<a name="17"><q-n>     17  </q-n></a>			<q-w>if</q-w>(vif.mon_cb.valid_i==1 &amp;&amp; vif.mon_cb.ready_o==1) <q-w>begin</q-w>
+<a name="18"><q-n>     18  </q-n></a>				tx=<q-w>new</q-w>();
+<a name="19"><q-n>     19  </q-n></a>				$display(<q-l>"valid tx detected %0t"</q-l>,$<q-w>time</q-w>);
+<a name="20"><q-n>     20  </q-n></a>				tx.wr_rd=vif.mon_cb.wr_rd_i;
+<a name="21"><q-n>     21  </q-n></a>				tx.addr=vif.mon_cb.addr_i;
+<a name="22"><q-n>     22  </q-n></a>				<q-w>if</q-w>(tx.wr_rd==1) tx.data=vif.mon_cb.wdata_i;
+<a name="23"><q-n>     23  </q-n></a>				<q-w>else</q-w> tx.data=vif.mon_cb.rdata_o;
+<a name="24"><q-n>     24  </q-n></a>				common::mon2cov.put(tx);
+<a name="25"><q-n>     25  </q-n></a>			<q-w>end</q-w>
+<a name="26"><q-n>     26  </q-n></a>		<q-w>end</q-w>
+<a name="27"><q-n>     27  </q-n></a>	<q-w>endtask</q-w>
+<a name="28"><q-n>     28  </q-n></a><q-w>endclass</q-w>
+<a name="29"><q-n>     29  </q-n></a>
+</pre>
+</tt>
+
+  
+</body>
+</html>

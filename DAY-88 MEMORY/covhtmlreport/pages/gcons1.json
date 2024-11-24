@@ -1,0 +1,5 @@
+var g_db_data = [
+{dummy:0},
+{name:'mem_cg',f:1,type:6,id:49,tb:'14',h:'14',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/top_sv_unit/mem_cov',parent:'47'},
+{name:'mem_cg',f:1,type:6,id:100,tb:'14',h:'14',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','true']],hdlPath:'work.top_sv_unit::mem_cov',parent:'98'}];
+processConsCovergroupsData(g_db_data);

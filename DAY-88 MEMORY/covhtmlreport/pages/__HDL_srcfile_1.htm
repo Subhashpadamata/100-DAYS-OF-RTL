@@ -1,0 +1,79 @@
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>Questa Coverage Report</title>
+  <link rel="StyleSheet" media="screen" href="../css/hdl2html.css"/>
+</head>
+<body id="hdl2html">
+  <tt>
+<pre>
+<a name="1"><q-n>     1  </q-n></a>`<q-a>define</q-w> addr_width 16
+<a name="2"><q-n>     2  </q-n></a>`<q-a>define</q-w> width 32
+<a name="3"><q-n>     3  </q-n></a>
+<a name="4"><q-n>     4  </q-n></a>`<q-i>include</q-w> <q-l>"<a href="__HDL_srcfile_3.htm">memory.sv</a>"</q-l>
+<a name="5"><q-n>     5  </q-n></a>`<q-i>include</q-w> <q-l>"<a href="__HDL_srcfile_2.htm">mem_intf.sv</a>"</q-l>
+<a name="6"><q-n>     6  </q-n></a>`<q-i>include</q-w> <q-l>"<a href="__HDL_srcfile_4.htm">mem_tx.sv</a>"</q-l>
+<a name="7"><q-n>     7  </q-n></a>`<q-i>include</q-w> <q-l>"<a href="__HDL_srcfile_11.htm">common.sv</a>"</q-l>
+<a name="8"><q-n>     8  </q-n></a>`<q-i>include</q-w> <q-l>"<a href="__HDL_srcfile_5.htm">mem_mon.sv</a>"</q-l>
+<a name="9"><q-n>     9  </q-n></a>`<q-i>include</q-w> <q-l>"<a href="__HDL_srcfile_6.htm">mem_cov.sv</a>"</q-l>
+<a name="10"><q-n>     10  </q-n></a>`<q-i>include</q-w> <q-l>"<a href="__HDL_srcfile_7.htm">mem_gen.sv</a>"</q-l>
+<a name="11"><q-n>     11  </q-n></a>`<q-i>include</q-w> <q-l>"<a href="__HDL_srcfile_8.htm">mem_bfm.sv</a>"</q-l>
+<a name="12"><q-n>     12  </q-n></a>`<q-i>include</q-w> <q-l>"<a href="__HDL_srcfile_9.htm">mem_agent.sv</a>"</q-l>
+<a name="13"><q-n>     13  </q-n></a>`<q-i>include</q-w> <q-l>"<a href="__HDL_srcfile_10.htm">mem_env.sv</a>"</q-l>
+<a name="14"><q-n>     14  </q-n></a>
+<a name="15"><q-n>     15  </q-n></a>
+<a name="16"><q-n>     16  </q-n></a><q-w>module</q-w> top;
+<a name="17"><q-n>     17  </q-n></a>	<q-w>bit</q-w> clk, rst;
+<a name="18"><q-n>     18  </q-n></a>	<q-w>int</q-w> num_tx;
+<a name="19"><q-n>     19  </q-n></a>	<q-w>int</q-w> num_agents;
+<a name="20"><q-n>     20  </q-n></a>	mem_env env;
+<a name="21"><q-n>     21  </q-n></a>	<q-w>event</q-w> start_env;
+<a name="22"><q-n>     22  </q-n></a>	
+<a name="23"><q-n>     23  </q-n></a>	mem_intf pif(clk,rst); 
+<a name="24"><q-n>     24  </q-n></a>
+<a name="25"><q-n>     25  </q-n></a><q-m>//	memory #(.WIDTH(`width),.ADDR_WIDTH(`addr_width))</q-m>
+<a name="26"><q-n>     26  </q-n></a>memory dut	(
+<a name="27"><q-n>     27  </q-n></a>		.clk_i	(pif.clk_i), 
+<a name="28"><q-n>     28  </q-n></a>		.rst_i	(pif.rst_i), 
+<a name="29"><q-n>     29  </q-n></a>		.addr_i	(pif.addr_i), 
+<a name="30"><q-n>     30  </q-n></a>		.wr_rd_i(pif.wr_rd_i), 
+<a name="31"><q-n>     31  </q-n></a>		.wdata_i(pif.wdata_i), 
+<a name="32"><q-n>     32  </q-n></a>		.rdata_o(pif.rdata_o), 
+<a name="33"><q-n>     33  </q-n></a>		.valid_i(pif.valid_i), 
+<a name="34"><q-n>     34  </q-n></a>		.ready_o(pif.ready_o)
+<a name="35"><q-n>     35  </q-n></a>	);
+<a name="36"><q-n>     36  </q-n></a>
+<a name="37"><q-n>     37  </q-n></a>	<q-w>always</q-w> #5 clk=~clk;
+<a name="38"><q-n>     38  </q-n></a>	<q-w>initial</q-w> <q-w>begin</q-w>
+<a name="39"><q-n>     39  </q-n></a>		rst=1;
+<a name="40"><q-n>     40  </q-n></a>		<q-w>repeat</q-w>(2) @(<q-a>posedge</q-w> clk);
+<a name="41"><q-n>     41  </q-n></a>		rst=0;
+<a name="42"><q-n>     42  </q-n></a>		-&gt;start_env;
+<a name="43"><q-n>     43  </q-n></a>	<q-w>end</q-w>
+<a name="44"><q-n>     44  </q-n></a>	<q-w>initial</q-w> <q-w>begin</q-w>
+<a name="45"><q-n>     45  </q-n></a>		<q-w>assert</q-w>($value$plusargs(<q-l>"testname=%s"</q-l>,common::testname));
+<a name="46"><q-n>     46  </q-n></a>		<q-w>assert</q-w>($value$plusargs(<q-l>"num_tx=%0d"</q-l>,num_tx));
+<a name="47"><q-n>     47  </q-n></a>		<q-w>assert</q-w>($value$plusargs(<q-l>"num_agents=%0d"</q-l>,num_agents));
+<a name="48"><q-n>     48  </q-n></a>		common::num_tx=num_tx;
+<a name="49"><q-n>     49  </q-n></a>		common::num_agents=num_agents;
+<a name="50"><q-n>     50  </q-n></a>		<q-w>wait</q-w>(start_env.triggered());
+<a name="51"><q-n>     51  </q-n></a>			env=<q-w>new</q-w>();
+<a name="52"><q-n>     52  </q-n></a>			env.run();
+<a name="53"><q-n>     53  </q-n></a>	<q-w>end</q-w>
+<a name="54"><q-n>     54  </q-n></a>
+<a name="55"><q-n>     55  </q-n></a>	<q-w>initial</q-w> <q-w>begin</q-w>
+<a name="56"><q-n>     56  </q-n></a>		<q-w>wait</q-w>(common::func_start.triggered());
+<a name="57"><q-n>     57  </q-n></a>		<q-m>//common::num_tx_generated==common::num_tx_driven</q-m>
+<a name="58"><q-n>     58  </q-n></a>		<q-w>repeat</q-w>(2) @(<q-a>posedge</q-w> clk);
+<a name="59"><q-n>     59  </q-n></a>		$finish();
+<a name="60"><q-n>     60  </q-n></a>	<q-w>end</q-w>
+<a name="61"><q-n>     61  </q-n></a>	
+<a name="62"><q-n>     62  </q-n></a><q-w>endmodule</q-w>
+<a name="63"><q-n>     63  </q-n></a>
+</pre>
+</tt>
+
+  
+</body>
+</html>
